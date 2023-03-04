@@ -1,23 +1,37 @@
 import React, {useState} from 'react';
 import Input from '../../components/atoms/InPut/input';
-import {View, Image} from 'react-native';
-import ArrowBack from '../../assets/svgs/ArrowBackIcon';
-import SvgIcon from '../../assets/svgs';
-import {RFValue} from '../../config/dimensions';
+import {View, Image,Text,} from 'react-native';
+
+import Button from '../../components/atoms/Button/Button';
+import { CustomText16 ,CustomTextRgular14} from '../../components/atoms/Text/text';
+import { ViewRow } from '../../components/atoms/ViewRow';
+import styles from './styles';
+import { SimpleHeader } from '../../components/organisms/Header/Header';
+
+
+
 
 export const SignIView = () => {
   return (
-    <View style={{justifyContent: 'center', flexDirection: 'row'}}>
+    <View  >
+   <SimpleHeader  onpress={()=>{console.log('go back')}}></SimpleHeader>
       <Input
-      
-        password={false}
+       icon={'KeyIcon'}
+        password={true}
         editable={true}
-       // showSvgIcon={true}
+        maxLength={40}
         keyboardType={'default'}
         secureTextEntry={true}
         onChangeText={() => {}}
-        placeholder={'enter your email'}
-      />
+        placeholder={'Enter your email'}
+      
+      /> 
+       <Button title={'Login'} onpress={()=>{console.log(' pressed')}} > </Button>
+    <ViewRow style={styles.viewContainer} >
+   
+      <Text>ff</Text>
+    </ViewRow>
+  
     </View>
   );
 };

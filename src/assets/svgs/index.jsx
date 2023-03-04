@@ -38,90 +38,31 @@ import EyeSlashOffIcon from './EyeSlashOffIcon';
 // import MasterCard from './MasterCard';
 // import VerficationPhoneIcon from './VerficationPhoneIcon';
 
-function SvgIcon(props) {
+function SvgIcon(props  ) {
   switch (props.name) {
     case 'ArrowBack':
-      return <ArrowBack  />;
+      return <ArrowBack {...props} style={ props.style} />;
     case 'EyeSlashIcon':
-      return <EyeSlashIcon />;
+      return <EyeSlashIcon {...props} style={ props.style} />;
     case 'HeadPhoneIcon':
-      return <HeadPhoneIcon  />;
+      return <HeadPhoneIcon {...props} style={ props.style} />;
     case 'KeyIcon':
-      return <KeyIcon  />;
+      return <KeyIcon {...props} style={ props.style} />;
     case 'PasswordSentIcon':
-      return <PasswordSentIcon  />;
+      return <PasswordSentIcon {...props} style={ props.style} />;
     case 'ProfileIcon':
-      return <ProfileIcon />;
+      return <ProfileIcon {...props} style={ props.style}/>;
     case 'SmsIcon':
-      return <SmsIcon />;
+      return <SmsIcon {...props} style={ props.style}/>;
     // tab button navigation icons
     case 'EyeSlashOffIcon':
-      return <EyeSlashOffIcon  />;
-    // case 'Favorites':
-    //   return <FavoritesIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'AddAds':
-    //   return <AddIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'Categories':
-    //   return <CategoriesIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'Account':
-    //   return <AccountIcon {...props} style={[props.rotate && style, props.style]} />;
+      return <EyeSlashOffIcon {...props} style={ props.style} />;
 
-    // account tab icons
-
-    // case 'MoneyIcon':
-    //   return <MoneyIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'AboutIcon':
-    //   return <AboutIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'LockIcon':
-    //   return <LockIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'TermsAndCondationIcon':
-    //   return <TermsAndCondationIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'SettingIcon':
-    //   return <SettingIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'PhoneIcon':
-    //   return <PhoneIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'HelpIcon':
-    //   return <HelpIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'LogoutIcon':
-    //   return <LogoutIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'ArrowIcon':
-    //   return <ArrowIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'AddImageIcon':
-    //   return <AddImageIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'CloseIcon':
-    //   return <CloseIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'WhatsIcon':
-    //   return <WhatsIcon {...props} style={[props.rotate && style, props.style]} />;
-    // case 'ShowPassword':
-    //   return <ShowPassword {...props} style={[props.rotate && style, props.style]} />;
-    // case 'HidePassword':
-    //   return <HidePassword {...props} style={[props.rotate && style, props.style]} />;
-    //   case 'MasterCard':
-    //     return <MasterCard {...props} style={[props.rotate && style, props.style]} />;
-    //     case 'VerficationPhoneIcon':
-    //       return <VerficationPhoneIcon {...props} style={[props.rotate && style, props.style]} />;
 
     default:
-      return <ProfileIcon />;
+      return null;
   }
 }
 
-const getRotate = rotate => {
-  switch (rotate) {
-    case 'top':
-      return '90deg';
-    case 'bottom':
-      return '270deg';
-    case 'left':
-      return '0deg';
-    case 'right':
-      return '-180deg';
-    default:
-      return '0deg';
-  }
-};
 
-SvgIcon.defaultProps = {
-  size: 14,
-};
 export default SvgIcon;
