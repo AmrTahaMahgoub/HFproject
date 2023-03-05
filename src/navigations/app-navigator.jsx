@@ -1,10 +1,10 @@
 import React from 'react';
 import Splash from '../screens/Splash';
-
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignIn from '../screens/SignIn';
 import SignUp from '../screens/SignUp';
-import { SignIView } from '../screens/SignIn/SignInView';
+import PasswardReset from '../screens/PasswardReset';
+import {SignIView} from '../screens/SignIn/SignInView';
 
 export function AppStackNavigator() {
   const Stack = createNativeStackNavigator();
@@ -13,9 +13,11 @@ export function AppStackNavigator() {
       screenOptions={{headerShown: false}}
       initialRouteName="Splash">
       <Stack.Screen name="Splash" component={Splash} />
+      <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="SignIn" component={SignIn} />
       <Stack.Screen name="SignInView" component={SignIView} />
-      <Stack.Screen name="SignUp" component={SignUp} />
+
+      <Stack.Screen name="PasswardReset" component={PasswardReset} />
 
       {/* <Stack.Screen
                 name="SignUp"

@@ -3,7 +3,7 @@ import { SplashView } from './SplashView';
 const Splash=({navigation})=> {
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('SignUp');
+      navigation.navigate('PasswardReset');
     }, 2000);
   }, []);
   return <SplashView />;
