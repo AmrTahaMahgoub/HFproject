@@ -3,19 +3,21 @@ import Splash from '../screens/Splash';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignIn from '../screens/SignIn';
+import SignUp from '../screens/SignUp';
+import { SignIView } from '../screens/SignIn/SignInView';
 
 export function AppStackNavigator() {
-    const Stack = createNativeStackNavigator();
+  const Stack = createNativeStackNavigator();
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
       initialRouteName="Splash">
       <Stack.Screen name="Splash" component={Splash} />
-      <Stack.Screen
-                name="SignIn"
-                component={SignIn} />
+      <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen name="SignInView" component={SignIView} />
+      <Stack.Screen name="SignUp" component={SignUp} />
 
-            {/* <Stack.Screen
+      {/* <Stack.Screen
                 name="SignUp"
                 component={SignUp} />
             <Stack.Screen

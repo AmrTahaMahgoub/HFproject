@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.YELLOW,
     borderRadius: getHeight(12),
     flexDirection: 'row',
+    alignSelf:"center",
+    marginBottom:getHeight(24),
+    marginTop:getHeight(40)
+
   },
 });
 export default styles;

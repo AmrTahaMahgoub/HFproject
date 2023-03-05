@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   contentHeader: {
     width: '100%',
     backgroundColor: Colors.PETROLUIM,
-    height: getHeight(144),
+    height: getHeight(98),
     alignItems: 'center',
 
   },

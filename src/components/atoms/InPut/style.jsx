@@ -3,28 +3,31 @@ import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
 import {Colors, Typography} from '../../../styles';
 
 const styles = StyleSheet.create({
-  inputContainer: {
-    alignItems: 'center',
+  innercontainer: {
+    alignItems: 'baseline',
     borderRadius: RFValue(8),
-    backgroundColor: 'grey',
+    backgroundColor: Colors.OFF_WHITE,
     height: getHeight(48),
     width: getWidth(343),
+    justifyContent: 'space-between',
+    alignSelf: 'center',
+    marginTop: getHeight(12),
+    marginBottom: getHeight(16),
+    // alignContent:"center"
   },
+
   inputStyle: {
-    marginRight: getWidth(131),
+    // marginRight: getWidth(125),
     fontSize: Typography.FONT_SIZE_14,
     fontFamily: Typography.BOLD_NUNITO,
   },
 
   passwordButton: {
-    marginRight: getWidth(16),
-    marginLeft: getWidth(21),
+    marginRight: getWidth(17.99),
   },
 
   lefticon: {
     marginStart: getWidth(16.83),
-    // paddingStart:getHeight(17.83),
-    // paddingEnd:getHeight(17.83)
   },
 });
 export default styles;
