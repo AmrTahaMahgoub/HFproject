@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Input from '../../components/atoms/InPut/input';
-import {View, Image, Text} from 'react-native';
+import {View, Image, Text, Pressable} from 'react-native';
 import Button from '../../components/atoms/Button/Button';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import {ViewRow} from '../../components/atoms/ViewRow';
@@ -10,7 +10,7 @@ import {Colors} from '../../styles';
 import {getHeight, getWidth, RFValue} from '../../config/dimensions';
 import {images} from '../../assets';
 
-export const SignIView = ({navigation}) => {
+export const SignIView=({navigation})=> {
   return (
     <View
       style={{height: getHeight(126.66), backgroundColor: Colors.PETROLUIM}}>
@@ -72,10 +72,14 @@ export const SignIView = ({navigation}) => {
             style={styles.registernow}
             title={'Register now'}
             onpress={() => {
-              navigation.navigate('SignUp');
+              navigation.navigate('SignUpView');
             }}></Button>
         </ViewRow>
+        <View>
+        
+        </View>
       </View>
     </View>
   );
-};
+}
+

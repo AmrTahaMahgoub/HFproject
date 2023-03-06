@@ -11,7 +11,7 @@ import {getHeight, getWidth, RFValue} from '../../config/dimensions';
 import {images} from '../../assets';
 import Toast from '../../components/atoms/ToastMessage/ToastMessage';
 
-export const PasswardResretView = () => {
+export const PasswardResretView = ({navigation}) => {
   const [showToast, setShowToast] = useState(false);
 
   const handlePress = () => {
@@ -24,7 +24,7 @@ export const PasswardResretView = () => {
       <SimpleHeader
         title={'Reset password'}
         onpress={() => {
-          console.log('go back');
+        navigation.navigate('SignUpView')
         }}></SimpleHeader>
 
       <View

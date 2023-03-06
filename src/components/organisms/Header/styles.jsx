@@ -5,11 +5,15 @@ import {Colors} from '../../../styles';
 const styles = StyleSheet.create({
 
   backButton: {
-    marginLeft: getWidth(27.24),
+    marginLeft: getWidth(20),
+    marginRight: getWidth(65),
   },
 
   title: {
-    marginLeft: getWidth(93.76),
+    alignItems: 'center',
+    alignSelf:"center",
+    alignContent:"center",
+   
   },
 
   contentHeader: {
@@ -17,6 +21,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.PETROLUIM,
     height: getHeight(98),
     alignItems: 'center',
+    alignSelf:"center",
+    alignContent:"center"
 
   },
 });

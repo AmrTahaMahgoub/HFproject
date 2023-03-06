@@ -1,63 +1,18 @@
 import React from 'react';
 import Splash from '../screens/Splash';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import SignIn from '../screens/SignIn';
-import SignUp from '../screens/SignUp';
-import PasswardReset from '../screens/PasswardReset';
 import {SignIView} from '../screens/SignIn/SignInView';
+import {SignUpView} from '../screens/SignUp/SignUpView';
+import {PasswardResretView} from '../screens/PasswardReset/PasswardResetView';
+import {createStackNavigator} from '@react-navigation/stack';
 
+const Stack = createStackNavigator();
 export function AppStackNavigator() {
-  const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator
-      screenOptions={{headerShown: false}}
-      initialRouteName="Splash">
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Splash" component={Splash} />
-      <Stack.Screen name="SignUp" component={SignUp} />
-      <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen name="SignUpView" component={SignUpView} />
       <Stack.Screen name="SignInView" component={SignIView} />
-
-      <Stack.Screen name="PasswardReset" component={PasswardReset} />
-
-      {/* <Stack.Screen
-                name="SignUp"
-                component={SignUp} />
-            <Stack.Screen
-                name="SignIn"
-                component={SignIn} />
-            <Stack.Screen
-                name="ForgotPassword"
-                component={ForgotPassword} />
-            <Stack.Screen
-                initialParams={{ phone: '' }}
-                name="VerificationCode"
-                component={VerificationCode} />
-
-            <Stack.Screen
-                name="ChangeForgotPassword"
-                component={ChangeForgotPassword} />
-
-            <Stack.Screen
-                name="Payment"
-                component={Payment} />
-                       <Stack.Screen
-                name="AllComments"
-                component={AllComments} />
-
-            <Stack.Screen
-                name="AdsDetails"
-
-                options={{
-                    cardStyle: { backgroundColor: "transparent" }, cardStyleInterpolator: ({ current: { progress } }) => {
-                        return { cardStyle: { opacity: progress } }
-                    }
-                }}
-                // sharedElements={(route, otherRoute, showing) => {
-                //     const { item } = route.params;
-                //     return [{ id: `item.${item.id}.photo`, resize: "clip", align: "center-top", animation: "fade" },
-                //     ];
-                // }}
-                component={AdsDetails} /> */}
+      <Stack.Screen name="PasswardResretView" component={PasswardResretView} />
     </Stack.Navigator>
   );
 }
