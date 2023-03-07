@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.LIGHT_GRAY,
     borderWidth: 1,
     marginRight: getWidth(16),
+    alignItems:"center"
     
   },
 });

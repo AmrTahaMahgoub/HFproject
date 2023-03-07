@@ -1,14 +1,11 @@
-import Input from '../../components/atoms/InPut/input';
 import {View, Image, ScrollView} from 'react-native';
-import Button from '../../components/atoms/Button/Button';
+import {Button, CustomCheckBox, Input, ViewRow} from '../../components/atoms';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
-import {ViewRow} from '../../components/atoms/ViewRow';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {Colors} from '../../styles';
 import {getHeight, getWidth} from '../../config/dimensions';
 import {images} from '../../assets';
-import CustomCheckBox from '../../components/atoms/CheckBox/CustomCheckBox';
 
 export const SignUpView = ({navigation}) => {
   return (

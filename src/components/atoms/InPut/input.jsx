@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import {TextInput, TouchableOpacity} from 'react-native';
 import styles from './style';
 import SvgIcon from '../../../assets/svgs';
-import {ViewRow} from '../ViewRow';
+ import {ViewRow} from '../ViewRow';
 
-const Input = props => {
+
+export const Input = props => {
   const password = true;
   const showSvgIcon = true;
 
@@ -14,6 +15,7 @@ const Input = props => {
     <ViewRow style={styles.container}>
       <SvgIcon name={props.icon} style={styles.lefticon}></SvgIcon>
       <TextInput
+     
         editable={props.editable}
         maxLength={props.maxLength}
         keyboardType={props.keyboardType}
@@ -38,4 +40,4 @@ const Input = props => {
     </ViewRow>
   );
 };
-export default Input;
+

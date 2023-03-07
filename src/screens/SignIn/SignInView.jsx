@@ -1,9 +1,7 @@
 import React from 'react';
-import Input from '../../components/atoms/InPut/input';
-import {View, Image, Text, Pressable} from 'react-native';
-import Button from '../../components/atoms/Button/Button';
+import {View, Image} from 'react-native';
+import {Button, Input, ViewRow} from '../../components/atoms';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
-import {ViewRow} from '../../components/atoms/ViewRow';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {Colors} from '../../styles';

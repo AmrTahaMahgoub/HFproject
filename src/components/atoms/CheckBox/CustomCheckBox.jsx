@@ -4,8 +4,8 @@ import styles from './styles';
 import {RFValue} from '../../../config/dimensions';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Colors} from '../../../styles';
-Colors;
-const CustomCheckBox = () => {
+
+export const CustomCheckBox = () => {
   const [isSelected, setSelection] = useState(false);
 
   return (
@@ -16,11 +16,10 @@ const CustomCheckBox = () => {
       <View style={styles.container}>
         <Icon
           name={isSelected ? 'check' : null}
-          size={RFValue(14)}
+          size={RFValue(13)}
           color={Colors.PETROLUIM}
         />
       </View>
     </Pressable>
   );
 };
-export default CustomCheckBox;

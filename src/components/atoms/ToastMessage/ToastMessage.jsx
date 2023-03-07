@@ -4,7 +4,7 @@ import SvgIcon from '../../../assets/svgs';
 import {ViewRow} from '../ViewRow';
 import styles from './styles';
 
-const Toast = ({message}) => {
+export const Toast = ({message}) => {
   return (
     <ViewRow style={styles.box}>
       <SvgIcon name={'PasswordSentIcon'}></SvgIcon>
@@ -13,4 +13,4 @@ const Toast = ({message}) => {
   );
 };
 
-export default Toast;
+

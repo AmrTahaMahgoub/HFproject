@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {PasswardResretView} from './PasswardResetView';
-const PasswardReset = ({navigation}) => {
+const PasswardReset = () => {
   return (
     <View>
       <PasswardResretView></PasswardResretView>

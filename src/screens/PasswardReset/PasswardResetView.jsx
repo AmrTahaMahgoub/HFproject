@@ -1,15 +1,12 @@
 import React, {useState} from 'react';
-import Input from '../../components/atoms/InPut/input';
 import {View, Image, Modal} from 'react-native';
-import Button from '../../components/atoms/Button/Button';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
-import {ViewRow} from '../../components/atoms/ViewRow';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {Colors} from '../../styles';
 import {getHeight, getWidth} from '../../config/dimensions';
 import {images} from '../../assets';
-import Toast from '../../components/atoms/ToastMessage/ToastMessage';
+import {Button, Input, Toast, ViewRow} from '../../components/atoms';
 
 export const PasswardResretView = ({navigation}) => {
   const [showToast, setShowToast] = useState(false);

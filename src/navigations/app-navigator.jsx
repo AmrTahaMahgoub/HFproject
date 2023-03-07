@@ -1,9 +1,9 @@
 import React from 'react';
-import Splash from '../screens/Splash';
 import {SignIView} from '../screens/SignIn/SignInView';
 import {SignUpView} from '../screens/SignUp/SignUpView';
 import {PasswardResretView} from '../screens/PasswardReset/PasswardResetView';
 import {createStackNavigator} from '@react-navigation/stack';
+import { Splash } from '../screens';
 
 const Stack = createStackNavigator();
 export function AppStackNavigator() {

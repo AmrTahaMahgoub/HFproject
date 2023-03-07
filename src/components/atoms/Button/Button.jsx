@@ -3,7 +3,7 @@ import {TouchableOpacity} from 'react-native';
 import styles from './styles';
 import {CustomText19, CustomTextSemiBold14} from '../Text/text';
 
-const Button = props => {
+export const Button = props => {
   return (
     <TouchableOpacity
       style={[styles.StandardButtonContainer, props.style]}
@@ -14,4 +14,4 @@ const Button = props => {
     </TouchableOpacity>
   );
 };
-export default Button;
+
