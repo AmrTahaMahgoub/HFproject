@@ -3,38 +3,21 @@ import {Button, CustomCheckBox, Input, ViewRow} from '../../components/atoms';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
-import {Colors} from '../../styles';
-import {getHeight, getWidth} from '../../config/dimensions';
+
 import {images} from '../../assets';
 
 export const SignUpView = ({navigation}) => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: Colors.PETROLUIM,
-        }}>
+      <View style={styles.maincontainer}>
         <SimpleHeader
           title={'Register new account'}
           onpress={() => {
             navigation.navigate('SignInView');
           }}></SimpleHeader>
 
-        <View
-          style={{
-            paddingHorizontal: getWidth(16),
-            backgroundColor: Colors.WHITE,
-            paddingTop: getHeight(30),
-          }}>
-          <Image
-            style={{
-              width: getWidth(140),
-              height: getHeight(140),
-              alignSelf: 'center',
-            }}
-            source={images.logo}
-          />
+        <View style={styles.imagecontainer}>
+          <Image style={styles.imagestyle} source={images.logo} />
 
           <CustomTextRgular14>Name</CustomTextRgular14>
           <Input

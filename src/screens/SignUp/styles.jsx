@@ -1,5 +1,22 @@
 import {StyleSheet} from 'react-native';
+import {getWidth, getHeight} from '../../config/dimensions';
+import {Colors} from '../../styles';
+
 const styles = StyleSheet.create({
+  maincontainer: {
+    flex: 1,
+    backgroundColor: Colors.PETROLUIM,
+  },
+  imagecontainer: {
+    paddingHorizontal: getWidth(16),
+    backgroundColor: Colors.WHITE,
+    paddingTop: getHeight(30),
+  },
+  imagestyle: {
+    width: getWidth(140),
+    height: getHeight(140),
+    alignSelf: 'center',
+  },
   viewContainer: {
     backgroundColor: 'grey',
     height: 50,

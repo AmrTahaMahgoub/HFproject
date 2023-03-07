@@ -2,7 +2,7 @@ import React from 'react';
 import {View} from 'react-native';
 
 import {SignIView} from './SignInView';
-const SignIn = ({navigation}) => {
+const SignIn = () => {
   return (
     <View>
       <SignIView></SignIView>
