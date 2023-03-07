@@ -1,11 +1,7 @@
 import React from 'react';
 import {View, Text, Pressable} from 'react-native';
-import Button from '../../atoms/Button/Button';
-
-import {getHeight, getWidth} from '../../../config/dimensions';
-
+import {getHeight} from '../../../config/dimensions';
 import {Colors} from '../../../styles';
-
 import styles from './styles';
 import {ViewRow} from '../../atoms/ViewRow';
 import SvgIcon from '../../../assets/svgs';
@@ -17,7 +13,7 @@ export const SimpleHeader = props => {
     <>
       <ViewRow style={styles.contentHeader}>
         <Pressable onPress={props.onpress}>
-          <SvgIcon name={'ArrowBack'} style={styles.backButton}></SvgIcon>
+          <SvgIcon name={'ArrowBack'}></SvgIcon>
         </Pressable>
         <CustomText16 style={styles.title}>
           <Text>{props.title}</Text>

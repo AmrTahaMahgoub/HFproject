@@ -7,10 +7,10 @@ import {ViewRow} from '../../components/atoms/ViewRow';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {Colors} from '../../styles';
-import {getHeight, getWidth, RFValue} from '../../config/dimensions';
+import {getHeight, getWidth} from '../../config/dimensions';
 import {images} from '../../assets';
 
-export const SignIView=({navigation})=> {
+export const SignIView = ({navigation}) => {
   return (
     <View
       style={{height: getHeight(126.66), backgroundColor: Colors.PETROLUIM}}>
@@ -44,7 +44,7 @@ export const SignIView=({navigation})=> {
           keyboardType={'default'}
           secureTextEntry={false}
           onChangeText={() => {}}
-          placeholder={'Enter your email'}
+          placeholder={'Enter your email...'}
         />
         <CustomTextRgular14>Password</CustomTextRgular14>
         <Input
@@ -55,10 +55,10 @@ export const SignIView=({navigation})=> {
           keyboardType={'default'}
           secureTextEntry={true}
           onChangeText={() => {}}
-          placeholder={'Enter your password'}
+          placeholder={'Enter your password...'}
         />
         <CustomTextRgular14 style={styles.forgotpassword}>
-          Forgot Password?{' '}
+          Forgot Password ?
         </CustomTextRgular14>
         <Button
           title={'Login'}
@@ -75,11 +75,8 @@ export const SignIView=({navigation})=> {
               navigation.navigate('SignUpView');
             }}></Button>
         </ViewRow>
-        <View>
-        
-        </View>
+        <View></View>
       </View>
     </View>
   );
-}
-
+};

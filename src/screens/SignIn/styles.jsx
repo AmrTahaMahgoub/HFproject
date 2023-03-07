@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
   },
   forgotpassword: {
     alignSelf: 'flex-end',
+    textDecorationLine: 'underline',
   },
   mixedrow: {
     alignSelf: 'center',

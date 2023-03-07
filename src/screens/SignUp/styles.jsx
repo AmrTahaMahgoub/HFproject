@@ -18,5 +18,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textDecorationLine: 'underline',
   },
+  termsandcondition: {textDecorationLine: 'underline'},
 });
 export default styles;

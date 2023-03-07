@@ -7,7 +7,7 @@ import {ViewRow} from '../../components/atoms/ViewRow';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {Colors} from '../../styles';
-import {getHeight, getWidth, RFValue} from '../../config/dimensions';
+import {getHeight, getWidth} from '../../config/dimensions';
 import {images} from '../../assets';
 import Toast from '../../components/atoms/ToastMessage/ToastMessage';
 
@@ -24,7 +24,7 @@ export const PasswardResretView = ({navigation}) => {
       <SimpleHeader
         title={'Reset password'}
         onpress={() => {
-        navigation.navigate('SignUpView')
+          navigation.navigate('SignUpView');
         }}></SimpleHeader>
 
       <View
@@ -58,7 +58,6 @@ export const PasswardResretView = ({navigation}) => {
         <Modal visible={showToast} transparent>
           <Toast message="Password has been sent to your email" />
         </Modal>
-      
 
         <ViewRow style={styles.mixedrow}>
           <CustomTextRgular14>Need help ? </CustomTextRgular14>

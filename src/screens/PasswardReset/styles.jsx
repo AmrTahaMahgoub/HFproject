@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
-
   mixedrow: {
     alignSelf: 'center',
     alignItems: 'baseline',
@@ -10,6 +9,5 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textDecorationLine: 'underline',
   },
-
 });
 export default styles;

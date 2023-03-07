@@ -1,11 +1,12 @@
 import {StyleSheet} from 'react-native';
-import { WHITE } from '../../styles/colors';
+import { Colors } from '../../styles';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-   backgroundColor:WHITE
+    backgroundColor: Colors.WHITE,
   },
 });
 export default styles;

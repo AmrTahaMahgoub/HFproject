@@ -9,10 +9,8 @@ const Button = props => {
       style={[styles.StandardButtonContainer, props.style]}
       onPress={props.onpress}
       {...props}>
-        
       <CustomTextSemiBold14 {...props}> {props.title}</CustomTextSemiBold14>
       <CustomText19 {...props}>{props.name}</CustomText19>
-      
     </TouchableOpacity>
   );
 };
