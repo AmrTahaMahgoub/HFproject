@@ -1,18 +1,26 @@
 import {View, Image, ScrollView} from 'react-native';
 import {Button, CustomCheckBox, Input, ViewRow} from '../../components/atoms';
-import {CustomTextRgular14} from '../../components/atoms/Text/text';
+import {
+  CustomText16,
+  CustomTextRgular14,
+} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 
 import {images} from '../../assets';
+import {DefaultButton, TouchButton} from '../../components/atoms/Button/Button';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {StackNavigatorParamList} from '../../navigations/app-navigator';
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
+type NavigationProps = {navigation: ScreenNavigationProp};
 
-export const SignUpView = ({navigation}) => {
+export const SignUpView = ({navigation}: NavigationProps) => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.maincontainer}>
         <SimpleHeader
           title={'Register new account'}
-          onpress={() => {
+          onPress={() => {
             navigation.navigate('SignInView');
           }}></SimpleHeader>
 
@@ -70,21 +78,21 @@ export const SignUpView = ({navigation}) => {
               Terms & Conditions
             </CustomTextRgular14>
           </ViewRow>
-          <Button
+          <DefaultButton
             title={'Register'}
             onpress={() => {
               navigation.navigate('PasswardResretView');
               console.log(' Registered');
-            }}></Button>
+            }}></DefaultButton>
 
           <ViewRow style={styles.mixedrow}>
             <CustomTextRgular14>Have account? </CustomTextRgular14>
-            <Button
+            <TouchButton
               style={styles.registernow}
               title={'Login'}
               onpress={() => {
                 navigation.navigate('SignInView');
-              }}></Button>
+              }}></TouchButton>
           </ViewRow>
         </View>
       </View>

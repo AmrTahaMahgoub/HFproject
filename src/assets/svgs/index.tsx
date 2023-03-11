@@ -7,8 +7,16 @@ import PasswordSentIcon from './PasswordSentIcon';
 import ProfileIcon from './ProfileIcon';
 import SmsIcon from './SmsIcon';
 import EyeSlashOffIcon from './EyeSlashOffIcon';
+import {StyleProp} from 'react-native/types';
+import {TextStyle} from 'react-native/types';
+type SvgIconProps = {
+  color?: string;
+  size?: number;
+  style?: StyleProp<TextStyle>;
+  name?: string;
+};
 
-function SvgIcon(props) {
+export const SvgIcon = (props: SvgIconProps) => {
   switch (props.name) {
     case 'ArrowBack':
       return <ArrowBack {...props} style={props.style} />;
@@ -31,6 +39,4 @@ function SvgIcon(props) {
     default:
       return null;
   }
-}
-
-export default SvgIcon;
+};

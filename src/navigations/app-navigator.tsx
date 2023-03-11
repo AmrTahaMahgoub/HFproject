@@ -3,9 +3,16 @@ import {SignIView} from '../screens/SignIn/SignInView';
 import {SignUpView} from '../screens/SignUp/SignUpView';
 import {PasswardResretView} from '../screens/PasswardReset/PasswardResetView';
 import {createStackNavigator} from '@react-navigation/stack';
-import { Splash } from '../screens';
+import {Splash} from '../screens';
+export type StackNavigatorParamList = {
+  Splash: undefined;
+  SignUpView: undefined;
+  SignInView: undefined;
+  PasswardResretView: undefined;
+};
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<StackNavigatorParamList>();
+
 export function AppStackNavigator() {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>

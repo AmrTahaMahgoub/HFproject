@@ -4,9 +4,16 @@ import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
-import {Button, Input, Toast, ViewRow} from '../../components/atoms';
+import {Toast, ViewRow} from '../../components/atoms';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {StackNavigatorParamList} from '../../navigations/app-navigator';
+import {Input, DefaultButton} from '../../components/atoms';
+import {TouchButton} from '../../components/atoms/Button/Button';
 
-export const PasswardResretView = ({navigation}) => {
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
+type NavigationProps = {navigation: ScreenNavigationProp};
+
+export const PasswardResretView = ({navigation}: NavigationProps) => {
   const [showToast, setShowToast] = useState(false);
 
   const handlePress = () => {
@@ -17,7 +24,7 @@ export const PasswardResretView = ({navigation}) => {
     <View style={styles.maincontainer}>
       <SimpleHeader
         title={'Reset password'}
-        onpress={() => {
+        onPress={() => {
           navigation.navigate('SignUpView');
         }}></SimpleHeader>
 
@@ -35,19 +42,22 @@ export const PasswardResretView = ({navigation}) => {
           placeholder={'Enter your email'}
         />
 
-        <Button title={'Send'} onpress={handlePress}></Button>
+        <DefaultButton
+          title={'Send'}
+          onpress={handlePress}
+          style={undefined}></DefaultButton>
         <Modal visible={showToast} transparent>
           <Toast message="Password has been sent to your email" />
         </Modal>
 
         <ViewRow style={styles.mixedrow}>
           <CustomTextRgular14>Need help ? </CustomTextRgular14>
-          <Button
+          <TouchButton
             style={styles.contactus}
             title={'Contact us'}
             onpress={() => {
               console.log('contact us');
-            }}></Button>
+            }}></TouchButton>
         </ViewRow>
       </View>
     </View>

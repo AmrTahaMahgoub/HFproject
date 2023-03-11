@@ -4,18 +4,22 @@ import {getHeight} from '../../../config/dimensions';
 import {Colors} from '../../../styles';
 import styles from './styles';
 import {ViewRow} from '../../atoms/ViewRow';
-import SvgIcon from '../../../assets/svgs';
+import {SvgIcon} from '../../../assets/svgs';
 import {CustomText16} from '../../atoms/Text/text';
 import {RFValue} from '../../../config/dimensions';
+type SimpleHeaderProps = {
+  title?: string;
+  onPress?: () => void;
+};
 
-export const SimpleHeader = props => {
+export const SimpleHeader = (props: SimpleHeaderProps) => {
   return (
     <>
       <ViewRow style={styles.contentHeader}>
-        <Pressable onPress={props.onpress}>
+        <Pressable onPress={props.onPress}>
           <SvgIcon name={'ArrowBack'}></SvgIcon>
         </Pressable>
-        <CustomText16 style={styles.title}>
+        <CustomText16 style={styles.name}>
           <Text>{props.title}</Text>
         </CustomText16>
       </ViewRow>

@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {getHeight, getWidth} from '../../../config/dimensions';
 
 const styles = StyleSheet.create({
-  title: {
+  name: {
     textAlign: 'center',
     flex: 1,
     flexWrap: 'wrap',

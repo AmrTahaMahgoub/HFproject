@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
-import {View, Pressable} from 'react-native';
+import {View, Pressable, StyleProp, TextStyle} from 'react-native';
 import styles from './styles';
 import {RFValue} from '../../../config/dimensions';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {Colors} from '../../../styles';
 
 export const CustomCheckBox = () => {
-  const [isSelected, setSelection] = useState(false);
+  let [isSelected, setSelection] = useState(false);
 
   return (
     <Pressable
@@ -15,7 +15,7 @@ export const CustomCheckBox = () => {
       }}>
       <View style={styles.container}>
         <Icon
-          name={isSelected ? 'check' : null}
+          name={isSelected ? 'close' : 'check'}
           size={RFValue(13)}
           color={Colors.PETROLUIM}
         />

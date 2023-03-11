@@ -5,13 +5,18 @@ import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
+import {DefaultButton, TouchButton} from '../../components/atoms/Button/Button';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {StackNavigatorParamList} from '../../navigations/app-navigator';
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
+type NavigationProps = {navigation: ScreenNavigationProp};
 
-export const SignIView = ({navigation}) => {
+export const SignIView = ({navigation}: NavigationProps) => {
   return (
     <View style={styles.maincontainer}>
       <SimpleHeader
         title={'Login into account'}
-        onpress={() => {
+        onPress={() => {
           console.log('go back');
         }}></SimpleHeader>
 
@@ -42,20 +47,21 @@ export const SignIView = ({navigation}) => {
         <CustomTextRgular14 style={styles.forgotpassword}>
           Forgot Password ?
         </CustomTextRgular14>
-        <Button
+        <DefaultButton
           title={'Login'}
           onpress={() => {
             console.log(' pressed');
-          }}></Button>
+          }}
+          style={undefined}></DefaultButton>
 
         <ViewRow style={styles.mixedrow}>
           <CustomTextRgular14>Don’t have account? </CustomTextRgular14>
-          <Button
+          <TouchButton
             style={styles.registernow}
             title={'Register now'}
             onpress={() => {
               navigation.navigate('SignUpView');
-            }}></Button>
+            }}></TouchButton>
         </ViewRow>
         <View></View>
       </View>
