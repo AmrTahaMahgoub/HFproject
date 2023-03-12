@@ -11,15 +11,8 @@ import styles from './style';
 
 import {ViewRow} from '../ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
-export type IconsName =
-  | 'ArrowBackIcon'
-  | 'EyeSlashIcon'
-  | 'EyeSlashOffIcon'
-  | 'HeadPhoneIcon'
-  | 'KeyIcon'
-  | 'PasswordSentIcon'
-  | 'ProfileIcon'
-  | 'SmsIcon';
+import { IconsName } from '../../../@types/iconTypes';
+
 type InputProps = {
   label?: string;
   placeholder?: string;

@@ -7,9 +7,11 @@ import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
 import {DefaultButton, TouchButton} from '../../components/atoms/Button/Button';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {StackNavigatorParamList} from '../../navigations/app-navigator';
+import { StackNavigatorParamList } from '../../navigations/types';
+
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
+
 
 export const SignIView = ({navigation}: NavigationProps) => {
   return (

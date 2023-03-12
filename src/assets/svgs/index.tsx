@@ -9,6 +9,8 @@ import SmsIcon from './SmsIcon';
 import EyeSlashOffIcon from './EyeSlashOffIcon';
 import {StyleProp} from 'react-native/types';
 import {TextStyle} from 'react-native/types';
+import SearchIcon from './SearchIcon';
+import ListIcon from './ListIcon';
 type SvgIconProps = {
   color?: string;
   size?: number;
@@ -35,6 +37,10 @@ export const SvgIcon = (props: SvgIconProps) => {
 
     case 'EyeSlashOffIcon':
       return <EyeSlashOffIcon {...props} style={props.style} />;
+    case 'SearchIcon':
+      return <SearchIcon {...props} style={props.style} />;
+    case 'ListIcon':
+      return <ListIcon {...props} style={props.style} />;
 
     default:
       return null;

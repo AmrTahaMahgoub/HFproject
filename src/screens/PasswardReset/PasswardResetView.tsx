@@ -6,12 +6,15 @@ import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
 import {Toast, ViewRow} from '../../components/atoms';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {StackNavigatorParamList} from '../../navigations/app-navigator';
+
 import {Input, DefaultButton} from '../../components/atoms';
 import {TouchButton} from '../../components/atoms/Button/Button';
+import { StackNavigatorParamList } from '../../navigations/types';
+
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
+
 
 export const PasswardResretView = ({navigation}: NavigationProps) => {
   const [showToast, setShowToast] = useState(false);

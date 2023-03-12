@@ -1,7 +1,9 @@
 import {StackNavigationProp} from '@react-navigation/stack';
 import React, {useEffect} from 'react';
-import {StackNavigatorParamList} from '../../navigations/app-navigator';
+import { StackNavigatorParamList } from '../../navigations/types';
+
 import {SplashView} from './SplashView';
+
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
@@ -14,4 +16,3 @@ const Splash = ({navigation}: NavigationProps) => {
   return <SplashView />;
 };
 export default Splash;
-

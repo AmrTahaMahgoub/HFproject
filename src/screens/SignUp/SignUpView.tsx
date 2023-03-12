@@ -10,9 +10,12 @@ import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
 import {DefaultButton, TouchButton} from '../../components/atoms/Button/Button';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {StackNavigatorParamList} from '../../navigations/app-navigator';
+import { StackNavigatorParamList } from '../../navigations/types';
+
+
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
+
 
 export const SignUpView = ({navigation}: NavigationProps) => {
   return (
@@ -81,7 +84,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
           <DefaultButton
             title={'Register'}
             onpress={() => {
-              navigation.navigate('PasswardResretView');
+              navigation.navigate('BottomTabNavigator');
               console.log(' Registered');
             }}></DefaultButton>
 

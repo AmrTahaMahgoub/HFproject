@@ -4,12 +4,10 @@ import {SignUpView} from '../screens/SignUp/SignUpView';
 import {PasswardResretView} from '../screens/PasswardReset/PasswardResetView';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Splash} from '../screens';
-export type StackNavigatorParamList = {
-  Splash: undefined;
-  SignUpView: undefined;
-  SignInView: undefined;
-  PasswardResretView: undefined;
-};
+import {HomeScreenView} from '../screens/HomeScreen/HomeScreenView';
+import {BottomTabNavigator} from './bottom-tab-navigator';
+import { StackNavigatorParamList } from './types';
+
 
 const Stack = createStackNavigator<StackNavigatorParamList>();
 
@@ -20,6 +18,7 @@ export function AppStackNavigator() {
       <Stack.Screen name="SignUpView" component={SignUpView} />
       <Stack.Screen name="SignInView" component={SignIView} />
       <Stack.Screen name="PasswardResretView" component={PasswardResretView} />
+      <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
     </Stack.Navigator>
   );
 }
