@@ -1,16 +1,9 @@
-import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {HomeScreenView} from '../screens/HomeScreen/HomeScreenView';
-import {AccountView} from '../screens/Account/AccountView';
-import {BlogView} from '../screens/Bolg/BlogView';
-import {FavoriteScreenView} from '../screens/Favorite/FavoriteView';
-import {BottomTabNavigatorTypes} from './types';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import {Text, TouchableOpacity, View} from 'react-native';
-import {getHeight, getWidth, RFValue} from '../config/dimensions';
-import {Colors, Typography} from '../styles';
-import {SvgIcon} from '../assets/svgs';
-const Stack = createBottomTabNavigator<BottomTabNavigatorTypes>();
+import {SvgIcon} from '../../assets/svgs';
+import {getHeight, getWidth, RFValue} from '../../config/dimensions';
+import {Colors, Typography} from '../../styles';
+
 function TabBottomComponent({
   state,
   descriptors,
@@ -105,32 +98,3 @@ function Item({route, isFocused, label, onPress}: any) {
 }
 
 export {TabBottomComponent};
-
-export function BottomTabNavigator() {
-  return (
-    <Stack.Navigator
-      tabBar={props => <TabBottomComponent {...props} />}
-      screenOptions={{headerShown: false}}>
-      <Stack.Screen
-        initialParams={{icon: 'HomeIcon'}}
-        name="Home"
-        component={HomeScreenView}
-      />
-      <Stack.Screen
-        initialParams={{icon: 'MessageTextIcon'}}
-        name="Blog"
-        component={BlogView}
-      />
-      <Stack.Screen
-        initialParams={{icon: 'FavoriteIcon'}}
-        name="Favourites"
-        component={FavoriteScreenView}
-      />
-      <Stack.Screen
-        initialParams={{icon: 'UserIcon'}}
-        name="Account"
-        component={AccountView}
-      />
-    </Stack.Navigator>
-  );
-}

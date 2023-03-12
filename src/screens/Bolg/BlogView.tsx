@@ -11,7 +11,7 @@ type NavigationProps = {navigation: ScreenNavigationProp};
 
 
 export const BlogView = ({navigation}: NavigationProps) => {return <View>
-    <ComplexHeader  title={'Search'}  onPressed={() => {
+    <ComplexHeader  title={'blog'}  onPressed={() => {
         
         }} ></ComplexHeader>
        

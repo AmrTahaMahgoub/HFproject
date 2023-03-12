@@ -11,14 +11,22 @@ import {StyleProp} from 'react-native/types';
 import {TextStyle} from 'react-native/types';
 import SearchIcon from './SearchIcon';
 import ListIcon from './ListIcon';
-type SvgIconProps = {
-  color?: string;
-  size?: number;
-  style?: StyleProp<TextStyle>;
-  name?: string;
-};
+import {IconsName} from '../../@types/iconTypes';
+import {SvgProps} from 'react-native-svg';
+import HomeIcon from './HomeIcon';
+import MessageTextIcon from './MessageTextIcon';
+import FavoriteIcon from './FavoriteIcon';
+import UserIcon from './UserIcon';
 
-export const SvgIcon = (props: SvgIconProps) => {
+export interface IconsProps {
+  color?: string;
+  width?: number;
+  height?: number;
+  name?: any;
+}
+type SvgIconStyle ={style?:StyleProp<TextStyle>}
+
+export const SvgIcon = (props: IconsProps & SvgProps & SvgIconStyle) => {
   switch (props.name) {
     case 'ArrowBack':
       return <ArrowBack {...props} style={props.style} />;
@@ -41,7 +49,18 @@ export const SvgIcon = (props: SvgIconProps) => {
       return <SearchIcon {...props} style={props.style} />;
     case 'ListIcon':
       return <ListIcon {...props} style={props.style} />;
-
+      case 'HomeIcon':
+        return <HomeIcon {...props} style={props.style} />;
+        case 'MessageTextIcon':
+          return <MessageTextIcon {...props} style={props.style} />;
+          case 'FavoriteIcon':
+            return <FavoriteIcon {...props} style={props.style} />;
+            case 'UserIcon':
+              return <UserIcon {...props} style={props.style} />;
+            //UserIcon
+          //FavoriteIcon
+//HomeIcon
+//MessageTextIcon
     default:
       return null;
   }

@@ -4,10 +4,8 @@ import {SignUpView} from '../screens/SignUp/SignUpView';
 import {PasswardResretView} from '../screens/PasswardReset/PasswardResetView';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Splash} from '../screens';
-import {HomeScreenView} from '../screens/HomeScreen/HomeScreenView';
 import {BottomTabNavigator} from './bottom-tab-navigator';
-import { StackNavigatorParamList } from './types';
-
+import {StackNavigatorParamList} from './types';
 
 const Stack = createStackNavigator<StackNavigatorParamList>();
 

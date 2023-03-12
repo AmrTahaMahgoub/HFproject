@@ -6,6 +6,11 @@ export const REGULAR_NUNITO = 'Nunito-Regular';
 export const BOLD_NUNITO = 'Nunito-Bold';
 export const MEDIUM_NUNITO = 'Nunito-Medium';
 export const LIGHT_NUNITO = 'Nunito-Light';
+export const SEMIBOLD_MANROPE = 'Manrope-SemiBold';
+export const REGULAR_MANROPE = 'Manrope-Regular';
+export const BOLD_MANROPE = 'Manrope-Bold';
+export const MEDIUM_MANROPE = 'Manrope-Medium';
+export const LIGHT_MANROPE = 'Manrope-Light';
 
 export const FONT_SIZE_9 = RFValue(9, 812);
 
