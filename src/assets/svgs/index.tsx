@@ -17,6 +17,9 @@ import HomeIcon from './HomeIcon';
 import MessageTextIcon from './MessageTextIcon';
 import FavoriteIcon from './FavoriteIcon';
 import UserIcon from './UserIcon';
+import BedIcon from './BedIcon';
+import AreaIcon from './AreaIcon';
+import BanioIcon from './BanioIcon';
 
 export interface IconsProps {
   color?: string;
@@ -24,7 +27,7 @@ export interface IconsProps {
   height?: number;
   name?: any;
 }
-type SvgIconStyle ={style?:StyleProp<TextStyle>}
+type SvgIconStyle = {style?: StyleProp<TextStyle>};
 
 export const SvgIcon = (props: IconsProps & SvgProps & SvgIconStyle) => {
   switch (props.name) {
@@ -49,18 +52,21 @@ export const SvgIcon = (props: IconsProps & SvgProps & SvgIconStyle) => {
       return <SearchIcon {...props} style={props.style} />;
     case 'ListIcon':
       return <ListIcon {...props} style={props.style} />;
-      case 'HomeIcon':
-        return <HomeIcon {...props} style={props.style} />;
-        case 'MessageTextIcon':
-          return <MessageTextIcon {...props} style={props.style} />;
-          case 'FavoriteIcon':
-            return <FavoriteIcon {...props} style={props.style} />;
-            case 'UserIcon':
-              return <UserIcon {...props} style={props.style} />;
-            //UserIcon
-          //FavoriteIcon
-//HomeIcon
-//MessageTextIcon
+    case 'HomeIcon':
+      return <HomeIcon {...props} style={props.style} />;
+    case 'MessageTextIcon':
+      return <MessageTextIcon {...props} style={props.style} />;
+    case 'FavoriteIcon':
+      return <FavoriteIcon {...props} style={props.style} />;
+    case 'UserIcon':
+      return <UserIcon {...props} style={props.style} />;
+    case 'BedIcon':
+      return <BedIcon {...props} style={props.style} />;
+      case 'AreaIcon':
+      return <AreaIcon {...props} style={props.style} />;
+      case 'BanioIcon':
+        return <BanioIcon {...props} style={props.style} />;
+
     default:
       return null;
   }

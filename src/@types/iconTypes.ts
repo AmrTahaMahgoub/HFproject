@@ -12,7 +12,11 @@ export type IconsName =
   | 'HomeIcon'
   | 'MessageTextIcon'
   | 'FavoriteIcon'
-  | 'UserIcon';
+  | 'UserIcon'
+  | 'BedIcon'
+  | 'AreaIcon'
+  |"BanioIcon"
+  ;
   export interface IconsProps {
     color?: string;
     width?: number;

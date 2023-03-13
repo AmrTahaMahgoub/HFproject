@@ -21,7 +21,6 @@ function TabBottomComponent({
         paddingVertical: getHeight(12),
         borderTopLeftRadius: RFValue(30),
         borderTopRightRadius: RFValue(30),
-
         shadowOffset: {width: 0, height: -8},
         shadowOpacity: 0.04,
         shadowRadius: 10,
