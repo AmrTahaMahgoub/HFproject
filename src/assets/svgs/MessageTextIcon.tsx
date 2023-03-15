@@ -3,8 +3,8 @@ import Svg, { SvgProps, Path } from "react-native-svg"
 
 const MessageTextIcon = (props: SvgProps) => (
   <Svg
-    width={18}
-    height={18}
+    width={24}
+    height={24}
     fill="none"
     
     {...props}

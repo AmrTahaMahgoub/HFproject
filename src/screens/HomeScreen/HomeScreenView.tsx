@@ -1,5 +1,5 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {FlatList, Image, Text, View} from 'react-native';
+import {FlatList, Image, SafeAreaView, Text, View} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {IconProps} from 'react-native-vector-icons/Icon';
 import {images} from '../../assets';
@@ -20,24 +20,28 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
   return (
     <View>
       <ComplexHeader title={'Search'} onPressed={() => {}}></ComplexHeader>
-      <ScrollView accessibilityElementsHidden={true}>
+      <SafeAreaView>
         <View
-          style={{paddingHorizontal: getWidth(16),
-           backgroundColor: Colors.OFF_WHITE
-           }}>
-          <FlatList
-            data={DATA}
-            renderItem={({item}) => (
-              <Card
-                biano={item.banio}
-                area={item.area}
-                bed={item.bed}
-                image={item.image}
-                price={item.price}
-                id={item.id}></Card>
-            )}></FlatList>
+          style={{
+            paddingHorizontal: getWidth(16),
+            backgroundColor: Colors.OFF_WHITE,
+          }}>
+          <View>
+            <FlatList
+              showsVerticalScrollIndicator={false}
+              data={DATA}
+              renderItem={({item}) => (
+                <Card
+                  biano={item.banio}
+                  area={item.area}
+                  bed={item.bed}
+                  image={item.image}
+                  price={item.price}
+                  id={item.id}></Card>
+              )}></FlatList>
+          </View>
         </View>
-      </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };

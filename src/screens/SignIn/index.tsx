@@ -1,7 +1,8 @@
 import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {View} from 'react-native';
-import {StackNavigatorParamList} from '../../navigations/app-navigator';
+import { StackNavigatorParamList } from '../../navigations/types';
+
 
 import {SignIView} from './SignInView';
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;

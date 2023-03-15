@@ -1,19 +1,15 @@
-
 import {StackNavigationProp} from '@react-navigation/stack';
-import { View } from 'react-native';
-import { ComplexHeader } from '../../components/organisms/Header/Header';
-import { BottomTabNavigatorTypes } from '../../navigations/types';
-
-
-
+import {View} from 'react-native';
+import {ComplexHeader, MainHeader} from '../../components/organisms/Header/Header';
+import {BottomTabNavigatorTypes} from '../../navigations/types';
 
 type ScreenNavigationProp = StackNavigationProp<BottomTabNavigatorTypes>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
-
-export const FavoriteScreenView = ({navigation}: NavigationProps) => {return <View>
-    <ComplexHeader  title={'Search'}  onPressed={() => {
-         
-        }} ></ComplexHeader>
-       
-</View>}
+export const FavoriteScreenView = ({navigation}: NavigationProps) => {
+  return (
+    <View>
+    <MainHeader title={'Favorites'} IsIconShown={false} ></MainHeader>
+  </View>
+  );
+};

@@ -15,11 +15,13 @@ import {IconsName} from '../../@types/iconTypes';
 import {SvgProps} from 'react-native-svg';
 import HomeIcon from './HomeIcon';
 import MessageTextIcon from './MessageTextIcon';
-import FavoriteIcon from './FavoriteIcon';
+
 import UserIcon from './UserIcon';
 import BedIcon from './BedIcon';
 import AreaIcon from './AreaIcon';
 import BanioIcon from './BanioIcon';
+import UnFavoriteIcon from './unFavoriteIcon';
+import FavoriteIcon from './favoriteIcon';
 
 export interface IconsProps {
   color?: string;
@@ -56,16 +58,18 @@ export const SvgIcon = (props: IconsProps & SvgProps & SvgIconStyle) => {
       return <HomeIcon {...props} style={props.style} />;
     case 'MessageTextIcon':
       return <MessageTextIcon {...props} style={props.style} />;
-    case 'FavoriteIcon':
-      return <FavoriteIcon {...props} style={props.style} />;
+    case 'UnFavoriteIcon':
+      return <UnFavoriteIcon {...props} style={props.style} />;
     case 'UserIcon':
       return <UserIcon {...props} style={props.style} />;
     case 'BedIcon':
       return <BedIcon {...props} style={props.style} />;
-      case 'AreaIcon':
+    case 'AreaIcon':
       return <AreaIcon {...props} style={props.style} />;
-      case 'BanioIcon':
-        return <BanioIcon {...props} style={props.style} />;
+    case 'BanioIcon':
+      return <BanioIcon {...props} style={props.style} />;
+    case 'FavoriteIcon':
+      return <FavoriteIcon {...props} style={props.style} />;
 
     default:
       return null;

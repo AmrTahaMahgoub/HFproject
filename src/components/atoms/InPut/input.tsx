@@ -8,7 +8,6 @@ import {
   ViewStyle,
 } from 'react-native';
 import styles from './style';
-
 import {ViewRow} from '../ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
 import { IconsName } from '../../../@types/iconTypes';

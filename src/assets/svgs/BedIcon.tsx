@@ -4,7 +4,7 @@ import Svg, { SvgProps, Path } from "react-native-svg"
 const BedIcon = (props: SvgProps) => (
   <Svg
     width={16}
-    height={16}
+    height={10.75}
     fill="none"
    
     {...props}

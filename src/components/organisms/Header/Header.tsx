@@ -1,12 +1,10 @@
 import React from 'react';
 import {View, Text, Pressable, TextInput} from 'react-native';
-import {getHeight, getWidth} from '../../../config/dimensions';
-import {Colors} from '../../../styles';
 import styles from './styles';
 import {ViewRow} from '../../atoms/ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
-import {CustomText16} from '../../atoms/Text/text';
-import {RFValue} from '../../../config/dimensions';
+import {CustomText16, CustomText18} from '../../atoms/Text/text';
+
 type SimpleHeaderProps = {
   title?: string;
   onPress?: () => void;
@@ -23,14 +21,7 @@ export const SimpleHeader = (props: SimpleHeaderProps) => {
           <Text>{props.title}</Text>
         </CustomText16>
       </ViewRow>
-      <View
-        style={{
-          borderTopStartRadius: RFValue(32),
-          borderTopEndRadius: RFValue(32),
-          backgroundColor: Colors.WHITE,
-          height: getHeight(39),
-          width: '100%',
-        }}></View>
+      <View style={styles.blankcontainer}></View>
     </>
   );
 };
@@ -41,30 +32,16 @@ type ComplexHeaderProps = {
 };
 export const ComplexHeader = (props: ComplexHeaderProps) => {
   return (
-    <View
-      style={{
-        flexDirection: 'column',
-        backgroundColor: Colors.PETROLUIM,
-        height: getHeight(112),
-         paddingTop: getHeight(10),
-         borderBottomLeftRadius:RFValue(16),
-         borderBottomRightRadius:RFValue(16),
-      }}>
+    <View style={styles.complexheader}>
       <ViewRow style={styles.searchbar}>
         <Pressable onPress={props.onPressed}>
-          <SvgIcon name={'ArrowBack'} ></SvgIcon>
+          <SvgIcon name={'ArrowBack'}></SvgIcon>
         </Pressable>
         <CustomText16 style={styles.headertitle}>
           <Text>{props.title}</Text>
         </CustomText16>
       </ViewRow>
-      <ViewRow
-        style={{
-          justifyContent: 'space-between',
-          marginHorizontal: getWidth(16),
-           marginVertical: getHeight(14),
-         
-        }}>
+      <ViewRow style={styles.searchinputview}>
         <ViewRow style={styles.searchinputtext}>
           <SvgIcon
             name={'SearchIcon'}
@@ -80,10 +57,28 @@ export const ComplexHeader = (props: ComplexHeaderProps) => {
             style={styles.inputStyle}></TextInput>
         </ViewRow>
         <View style={styles.listiconcontainer}>
-          <SvgIcon name={'ListIcon'} style={styles.listicon}></SvgIcon>
+          <SvgIcon name={'ListIcon'}></SvgIcon>
         </View>
       </ViewRow>
     </View>
   );
 };
-//<View style={styles.listiconcontainer}></View>
+type MainHeaderProps = {
+  title?: String;
+  onPressed?: () => void;
+  IsIconShown?: Boolean;
+};
+export const MainHeader = (props: MainHeaderProps) => {
+  return (
+    <ViewRow style={styles.mainheader}>
+      {props.IsIconShown && (
+        <Pressable onPress={props.onPressed}>
+          <SvgIcon name={'ArrowBack'}></SvgIcon>
+        </Pressable>
+      )}
+      <CustomText18 style={styles.mainheadertitle}>
+        <Text>{props.title}</Text>
+      </CustomText18>
+    </ViewRow>
+  );
+};

@@ -11,15 +11,15 @@ export type IconsName =
   | 'ListIcon'
   | 'HomeIcon'
   | 'MessageTextIcon'
-  | 'FavoriteIcon'
   | 'UserIcon'
   | 'BedIcon'
   | 'AreaIcon'
-  |"BanioIcon"
-  ;
-  export interface IconsProps {
-    color?: string;
-    width?: number;
-    height?: number;
-    name: IconsName;
-  }
+  | 'BanioIcon'
+  | 'UnFavoriteIcon'
+  |"FavoriteIcon";
+export interface IconsProps {
+  color?: string;
+  width?: number;
+  height?: number;
+  name: IconsName;
+}

@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
 import {Colors, Typography} from '../../../styles';
-import {margin} from '../../../styles/mixins';
 
 const styles = StyleSheet.create({
   headertitle: {
@@ -9,8 +8,25 @@ const styles = StyleSheet.create({
     flex: 1,
     flexWrap: 'wrap',
   },
-  simpleHeaderSearchbar:{
-    height:getHeight(94),
+  mainheadertitle: {
+    textAlign: 'center',
+    flex: 1,
+    flexWrap: 'wrap',
+    marginBottom: getHeight(19),
+  },
+  mainheader: {
+    backgroundColor: Colors.PETROLUIM,
+    height: getHeight(62),
+    flexDirection: 'row',
+    paddingHorizontal: getWidth(20),
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+    borderBottomLeftRadius: RFValue(20),
+    borderBottomRightRadius: RFValue(20),
+  },
+  simpleHeaderSearchbar: {
+    height: getHeight(94),
     flexDirection: 'row',
     paddingHorizontal: getWidth(20),
     alignItems: 'center',
@@ -50,12 +66,32 @@ const styles = StyleSheet.create({
   listiconcontainer: {
     width: getHeight(48),
     height: getHeight(48),
+    paddingHorizontal: getWidth(16),
+    paddingVertical: getHeight(15),
     backgroundColor: Colors.YELLOW,
     borderRadius: RFValue(12),
-  },
-  listicon: {
     justifyContent: 'center',
-    margin: RFValue(16),
+    alignItems: 'center',
+  },
+  blankcontainer: {
+    borderTopStartRadius: RFValue(32),
+    borderTopEndRadius: RFValue(32),
+    backgroundColor: Colors.WHITE,
+    height: getHeight(39),
+    width: '100%',
+  },
+  complexheader: {
+    flexDirection: 'column',
+    backgroundColor: Colors.PETROLUIM,
+    height: getHeight(112),
+    paddingTop: getHeight(10),
+    borderBottomLeftRadius: RFValue(16),
+    borderBottomRightRadius: RFValue(16),
+  },
+  searchinputview: {
+    justifyContent: 'space-between',
+    marginHorizontal: getWidth(16),
+    marginVertical: getHeight(14),
   },
 });
 

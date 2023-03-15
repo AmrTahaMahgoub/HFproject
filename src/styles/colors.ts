@@ -5,3 +5,7 @@ export const YELLOW = '#F0DB04';
 export const GREEN = '#1DBA3F';
 export const LIGHT_GRAY = '#ADA8B8';
 export const OFF_WHITE = "#F5F5F5";
+export const DARK_OFF_WHITE="#E5EAF2"
+export const DARKY_LIGHT_GRAY = '#838396';
+export const BLACK = '#373F41';
+//

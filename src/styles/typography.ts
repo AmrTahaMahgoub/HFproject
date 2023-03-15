@@ -11,7 +11,9 @@ export const REGULAR_MANROPE = 'Manrope-Regular';
 export const BOLD_MANROPE = 'Manrope-Bold';
 export const MEDIUM_MANROPE = 'Manrope-Medium';
 export const LIGHT_MANROPE = 'Manrope-Light';
-
+//Mulish-SemiBold.
+export const SEMIBOLD_MULISH = 'Mulish-SemiBold';
+export const REGULAR_MULISH = 'Mulish-Regular';
 export const FONT_SIZE_9 = RFValue(9, 812);
 
 export const FONT_SIZE_10 = RFValue(10, 812);
@@ -30,8 +32,25 @@ export const FONT_SIZE_35 = RFValue(35, 812);
 
 // FONT WEIGHT
 export const FONT_WEIGHT_REGULAR = '400';
+export const FONT_WEIGHT_REGULAR500="500"
 export const FONT_WEIGHT_BOLD = '700';
 
 export const LINE_HEIGHT_24 = scaleFont(24);
 export const LINE_HEIGHT_20 = scaleFont(20);
 export const LINE_HEIGHT_16 = scaleFont(16);
+export const LINE_HEIGHT_22 = scaleFont(22);
+export const LINE_HEIGHT_15 = scaleFont(15);
+// <Image
+// source={{ uri: userFormik.values.photo }}
+// type="circle"
+// width={RFValue(75, 812)}
+// height={RFValue(75, 812)}
+// style={{ backgroundColor: Colors.Light_GRAY }}
+// />
+/** */
+// <SvgIcon
+// name={route.params.icon}
+// color={isFocused ? Colors.GREEN : Colors.DARK_GRAY}
+// width={getWidth(25.29)}
+// height={getHeight(22.72)}
+// />

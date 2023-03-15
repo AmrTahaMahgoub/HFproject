@@ -1,7 +1,8 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import {View} from 'react-native';
-import { StackNavigatorParamList } from '../../navigations/app-navigator';
+import { StackNavigatorParamList } from '../../navigations/types';
+
 import { BlogView } from './BlogView';
 
 
@@ -13,7 +14,7 @@ type NavigationProps={navigation:ScreenNavigationProp }
 const Blog = ({navigation}:NavigationProps) => {
   return (
     <View>
-      <BlogView navigation={navigation}></BlogView>
+      {/* <BlogView navigation={navigation}></BlogView> */}
     </View>
   );
 };

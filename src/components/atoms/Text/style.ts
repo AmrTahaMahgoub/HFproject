@@ -28,6 +28,11 @@ const styles = StyleSheet.create({
     fontSize: Typography.FONT_SIZE_19,
     color: Colors.DARK_GREY,
   },
+  bold18: {
+    fontFamily: Typography.BOLD_NUNITO,
+    fontSize: Typography.FONT_SIZE_18,
+    color: Colors.WHITE,
+  },
 });
 
 export default styles;
