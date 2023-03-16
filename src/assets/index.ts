@@ -5,7 +5,8 @@ export const images = {
     Building2: require('./img/Building(2).png'),
     Building3: require('./img/Building(3).png'),
     tour1:require("./img/tour1.png"),
-    tour2:require("./img/tour2.png")
+    tour2:require("./img/tour2.png"),
+     account:require("./img/account.png"),
 
   };
  

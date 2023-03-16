@@ -16,7 +16,10 @@ export type IconsName =
   | 'AreaIcon'
   | 'BanioIcon'
   | 'UnFavoriteIcon'
-  |"FavoriteIcon";
+  | 'FavoriteIcon'
+  |"ProfileCircle"
+  |"InternetCircule"
+
 export interface IconsProps {
   color?: string;
   width?: number;

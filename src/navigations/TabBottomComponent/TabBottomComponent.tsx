@@ -9,7 +9,7 @@ import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {getHeight, getWidth, RFValue} from '../../config/dimensions';
 import {Colors, Typography} from '../../styles';
-import { SvgIcon } from '../../assets/svgs';
+import {SvgIcon} from '../../assets/svgs';
 import styles from './styles';
 
 function TabBottomComponent({
@@ -18,8 +18,7 @@ function TabBottomComponent({
   navigation,
 }: BottomTabBarProps) {
   return (
-    <View
-      style={styles.bottonnavigationbar}>
+    <View style={styles.bottonnavigationbar}>
       {state.routes.map((route: any, index: number) => {
         const {options} = descriptors[route.key];
         const label =
@@ -62,26 +61,20 @@ function Item({route, isFocused, label, onPress}: any) {
     <TouchableOpacity activeOpacity={1} key={route.key} onPress={_onPress}>
       <View
         style={{
-          height: '100%',
           flexDirection: 'row',
           borderRadius: RFValue(50),
           backgroundColor: isFocused ? Colors.YELLOW : Colors.WHITE,
-          alignItems: 'center',
-          justifyContent: 'center',
-          alignContent: 'center',
-          paddingHorizontal: getWidth(14),
-        
+          // paddingHorizontal: getWidth(16),
+          paddingVertical: getHeight(12),
         }}>
         <SvgIcon
           name={route.params.icon}
           color={isFocused ? Colors.GREEN : Colors.GREEN}
-          width={getWidth(22)}
+          width={getWidth(23)}
           height={getHeight(27)}
+          style={{marginLeft: getWidth(16)}}
         />
-        <Text
-          style={styles.navigationbartitle}>
-          {label}
-        </Text>
+        <Text style={styles.navigationbartitle}>{label}</Text>
       </View>
     </TouchableOpacity>
   );

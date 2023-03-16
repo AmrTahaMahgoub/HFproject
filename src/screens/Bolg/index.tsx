@@ -3,8 +3,6 @@ import React from 'react';
 import {View} from 'react-native';
 import { StackNavigatorParamList } from '../../navigations/types';
 
-import { BlogView } from './BlogView';
-
 
 
 type ScreenNavigationProp = StackNavigationProp<

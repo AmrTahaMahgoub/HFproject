@@ -11,17 +11,20 @@ import {StyleProp} from 'react-native/types';
 import {TextStyle} from 'react-native/types';
 import SearchIcon from './SearchIcon';
 import ListIcon from './ListIcon';
-import {IconsName} from '../../@types/iconTypes';
 import {SvgProps} from 'react-native-svg';
 import HomeIcon from './HomeIcon';
 import MessageTextIcon from './MessageTextIcon';
-
 import UserIcon from './UserIcon';
 import BedIcon from './BedIcon';
 import AreaIcon from './AreaIcon';
 import BanioIcon from './BanioIcon';
 import UnFavoriteIcon from './unFavoriteIcon';
 import FavoriteIcon from './favoriteIcon';
+import ProfileCircle from './ProfileCircle';
+import InternetCircule from './InternetCircule';
+import ExcelemationCircule from './ExcelemationCircule';
+import MessageEdit from './MessageEdit';
+import ArrowForward from './ArrowForward';
 
 export interface IconsProps {
   color?: string;
@@ -70,6 +73,16 @@ export const SvgIcon = (props: IconsProps & SvgProps & SvgIconStyle) => {
       return <BanioIcon {...props} style={props.style} />;
     case 'FavoriteIcon':
       return <FavoriteIcon {...props} style={props.style} />;
+    case 'ProfileCircle':
+      return <ProfileCircle {...props} style={props.style} />;
+    case 'InternetCircule':
+      return <InternetCircule {...props} style={props.style} />;
+    case 'ExcelemationCircule':
+      return <ExcelemationCircule {...props} style={props.style} />;
+    case 'MessageEdit':
+      return <MessageEdit {...props} style={props.style} />;
+    case 'ArrowForward':
+      return <ArrowForward {...props} style={props.style} />;
 
     default:
       return null;

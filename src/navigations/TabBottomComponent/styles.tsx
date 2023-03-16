@@ -3,14 +3,13 @@ import {getHeight, getWidth, RFValue} from '../../config/dimensions';
 import {Colors, Typography} from '../../styles';
 
 const styles = StyleSheet.create({
-bottonnavigationbar:{
+  bottonnavigationbar: {
+    flexDirection: 'row',
+     alignItems: 'center',
+     justifyContent: 'center',
+    backgroundColor: Colors.WHITE,
     width: getWidth(375),
     height: getHeight(68),
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Colors.WHITE,
-    paddingHorizontal: getWidth(16),
     paddingVertical: getHeight(12),
     borderTopLeftRadius: RFValue(12),
     borderTopRightRadius: RFValue(12),
@@ -19,13 +18,12 @@ bottonnavigationbar:{
     shadowRadius: 10,
     elevation: 10,
   },
-  navigationbartitle:{
+  navigationbartitle: {
     fontSize: Typography.FONT_SIZE_12,
     fontFamily: Typography.REGULAR_MANROPE,
-    fontWeight: Typography.FONT_WEIGHT_REGULAR500,
-    lineHeight: Typography.LINE_HEIGHT_20,
+    lineHeight: Typography.LINE_HEIGHT_16,
     color: Colors.PETROLUIM,
-    marginLeft: getHeight(2),
+    marginRight:RFValue(16),
   },
 });
 export default styles;

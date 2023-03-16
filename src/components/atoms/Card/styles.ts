@@ -5,41 +5,37 @@ import {Colors, Typography} from '../../../styles';
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
-    alignItems: 'center',
     borderRadius: RFValue(16),
     marginVertical: getHeight(10),
-    width: getWidth(343),
-    height: getHeight(120),
     flexDirection: 'row',
-    paddingVertical: getHeight(8),
     paddingLeft: getWidth(8),
-    paddingRight: getWidth(16),
-    backgroundColor: Colors.WHITE
+    backgroundColor: Colors.WHITE,
   },
-  image:{width: RFValue(104, 812), height: RFValue(104, 812)},
-  textcolumn:{
+
+  image: {
+    alignSelf: 'center',
+  },
+  textcolumn: {
     flex: 1,
     alignItems: 'flex-start',
     paddingHorizontal: getWidth(16),
-    paddingVertical: getHeight(12),
+    paddingVertical: getHeight(8),
     justifyContent: 'center',
-    height: '100%',
   },
-  price:{
+  price: {
     fontFamily: Typography.BOLD_NUNITO,
     fontSize: Typography.FONT_SIZE_16,
     fontWeight: Typography.FONT_WEIGHT_BOLD,
-    lineHeight: Typography.LINE_HEIGHT_22,
-    marginBottom: getHeight(8),
-    
+    lineHeight: Typography.LINE_HEIGHT_24,
+    marginBottom: getHeight(10),
   },
-  icon:{
-    marginTop: getHeight(16),
+  icon: {
+    marginTop: getHeight(17.31),
     marginBottom: getHeight(80),
+    marginRight: getWidth(16),
     alignSelf: 'flex-start',
     width: getWidth(24),
     height: getHeight(24),
-  }
-
+  },
 });
 export default styles;

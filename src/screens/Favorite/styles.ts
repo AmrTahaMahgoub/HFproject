@@ -1,28 +1,21 @@
 import {StyleSheet} from 'react-native';
-import {getHeight, getWidth} from '../../config/dimensions';
-import {Colors} from '../../styles';
+import {getHeight} from '../../config/dimensions';
+import {Typography} from '../../styles';
 
 const styles = StyleSheet.create({
-  maincontainer: {height: getHeight(126.66), backgroundColor: Colors.PETROLUIM},
-  mixedrow: {
-    alignSelf: 'center',
-    alignItems: 'baseline',
-    alignContent: 'center',
+  properties: {
+    fontFamily: Typography.REGULAR_NUNITO,
+    fontWeight: Typography.FONT_WEIGHT_BOLD,
+    fontSize: Typography.FONT_SIZE_14,
+    lineHeight: Typography.LINE_HEIGHT_20,
+    marginTop: getHeight(21),
   },
-  contactus: {
-    alignSelf: 'center',
-    textDecorationLine: 'underline',
-  },
-  imagecontainer: {
-    height: getHeight(668),
-    paddingHorizontal: getWidth(16),
-    backgroundColor: Colors.WHITE,
-    paddingTop: getHeight(30),
-  },
-  imagestyle: {
-    width: getWidth(140),
-    height: getHeight(140),
-    alignSelf: 'center',
+  Blogposts: {
+    fontFamily: Typography.REGULAR_NUNITO,
+    fontWeight: Typography.FONT_WEIGHT_BOLD,
+    fontSize: Typography.FONT_SIZE_14,
+    lineHeight: Typography.LINE_HEIGHT_20,
+    marginTop: getHeight(16),
   },
 });
 export default styles;

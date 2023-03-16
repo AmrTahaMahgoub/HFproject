@@ -7,7 +7,8 @@ export const Card = ({biano, area, bed, image, price}: any) => {
   let [isFavorite, setFavorite] = useState(false);
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={image}></Image>
+      <Image  
+      style={styles.image} source={image}></Image>
       <View style={styles.textcolumn}>
         <Text style={styles.price}>{price}</Text>
         <ImageTextRow name="BedIcon" title={bed}></ImageTextRow>
@@ -19,7 +20,8 @@ export const Card = ({biano, area, bed, image, price}: any) => {
           setFavorite(!isFavorite);
         }}>
         <SvgIcon
-          name={isFavorite ? 'FavoriteIcon' : 'UnFavoriteIcon'}
+          name={isFavorite ? 'UnFavoriteIcon' : 'FavoriteIcon'}
+          
           style={styles.icon}></SvgIcon>
       </Pressable>
     </View>
