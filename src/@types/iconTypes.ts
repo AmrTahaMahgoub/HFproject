@@ -19,6 +19,7 @@ export type IconsName =
   | 'FavoriteIcon'
   |"ProfileCircle"
   |"InternetCircule"
+  |"BlueCheckIcon"
 
 export interface IconsProps {
   color?: string;

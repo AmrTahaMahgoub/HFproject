@@ -1,5 +1,17 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {FlatList, Text, View} from 'react-native';
+import React, { useCallback, useMemo, useRef } from 'react';
+
+
+
+import {
+  Button,
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {CustomAccountBox, CustomSharedData} from '../../components/atoms';
 import {
   ComplexHeader,
@@ -7,11 +19,14 @@ import {
 } from '../../components/organisms/Header/Header';
 import {BottomTabNavigatorTypes} from '../../navigations/types';
 import {ACCOUNT} from '../../redux/Api/GetData';
+/**/
+
 
 type ScreenNavigationProp = StackNavigationProp<BottomTabNavigatorTypes>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
 export const AccountView = ({navigation}: NavigationProps) => {
+
   return (
     <View>
       <MainHeader title={'Account'}></MainHeader>
@@ -28,16 +43,16 @@ export const AccountView = ({navigation}: NavigationProps) => {
       <CustomSharedData
         icon="ProfileCircle"
         title={'profile'}></CustomSharedData>
-         <CustomSharedData
+      <CustomSharedData
         icon="InternetCircule"
         title={'Change language'}></CustomSharedData>
-         <CustomSharedData
+      <CustomSharedData
         icon="ExcelemationCircule"
         title={'About us'}></CustomSharedData>
-         <CustomSharedData
+      <CustomSharedData
         icon="MessageEdit"
         title={'Contact us'}></CustomSharedData>
-       
     </View>
   );
 };
+

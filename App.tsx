@@ -1,7 +1,9 @@
-import * as React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+// import * as React from 'react';
+
 import {Colors} from './src/styles';
 import MainNavigator from './src/navigations';
+import { SafeAreaView, StatusBar } from 'react-native';
+
 
 const App = () => {
   return (
@@ -12,3 +14,8 @@ const App = () => {
   );
 };
 export default App;
+
+
+
+
+

@@ -1,9 +1,23 @@
-import React from 'react';
-import {View, Text, Pressable, TextInput} from 'react-native';
+import React, {useState} from 'react';
+
+import {
+  View,
+  Text,
+  Pressable,
+  TextInput,
+  Button,
+  StyleSheet,
+  FlatList,
+} from 'react-native';
 import styles from './styles';
 import {ViewRow} from '../../atoms/ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
 import {CustomText16, CustomText18} from '../../atoms/Text/text';
+import {SortedFilter} from '../../atoms';
+
+import Modal from 'react-native-modal';
+import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
+import {ModalSheet} from '../../atoms/Modal/ModalSheet';
 
 type SimpleHeaderProps = {
   title?: string;
@@ -31,6 +45,11 @@ type ComplexHeaderProps = {
   onPressed?: () => void;
 };
 export const ComplexHeader = (props: ComplexHeaderProps) => {
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggle = () => {
+    setModalVisible(!isModalVisible);
+  };
   return (
     <View style={styles.complexheader}>
       <ViewRow style={styles.searchbar}>
@@ -56,9 +75,24 @@ export const ComplexHeader = (props: ComplexHeaderProps) => {
             placeholder="Search..."
             style={styles.inputStyle}></TextInput>
         </ViewRow>
-        <View style={styles.listiconcontainer}>
-          <SvgIcon name={'ListIcon'}></SvgIcon>
-        </View>
+
+        <SortedFilter onPressed={toggle}></SortedFilter>
+
+        <ModalSheet
+          isVisible={isModalVisible}
+          onSwipeComplete={() => setModalVisible(false)}
+          swipeDirection={'down'}>
+          <View
+            style={{
+              height: getHeight(500),
+              width: '100%',
+              backgroundColor: 'white',
+              borderTopRightRadius: RFValue(8),
+              borderTopLeftRadius: RFValue(8),
+            }}>
+            <Text>Hello!</Text>
+          </View>
+        </ModalSheet>
       </ViewRow>
     </View>
   );
@@ -82,3 +116,4 @@ export const MainHeader = (props: MainHeaderProps) => {
     </ViewRow>
   );
 };
+

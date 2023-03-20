@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
     fontWeight: Typography.FONT_WEIGHT_BOLD,
     fontSize: Typography.FONT_SIZE_14,
     lineHeight: Typography.LINE_HEIGHT_20,
-    marginTop: getHeight(21),
+    marginTop: getHeight(15),
   },
   Blogposts: {
     fontFamily: Typography.REGULAR_NUNITO,
     fontWeight: Typography.FONT_WEIGHT_BOLD,
     fontSize: Typography.FONT_SIZE_14,
     lineHeight: Typography.LINE_HEIGHT_20,
-    marginTop: getHeight(16),
+    marginTop: getHeight(10),
   },
 });
 export default styles;

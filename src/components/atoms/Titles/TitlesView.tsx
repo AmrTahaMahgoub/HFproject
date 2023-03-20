@@ -4,7 +4,9 @@ import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
 import {Colors} from '../../../styles';
 import styles from './styles';
 
-export const TitlesView = ({title}: any) => {
+
+export const TitlesView = ({title}:any) => {
+ 
   let [IsTouched, setTouched] = useState(false);
 
   return (

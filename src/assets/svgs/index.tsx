@@ -25,6 +25,7 @@ import InternetCircule from './InternetCircule';
 import ExcelemationCircule from './ExcelemationCircule';
 import MessageEdit from './MessageEdit';
 import ArrowForward from './ArrowForward';
+import BlueCheckIcon from './BlueCheckIcon';
 
 export interface IconsProps {
   color?: string;
@@ -83,6 +84,9 @@ export const SvgIcon = (props: IconsProps & SvgProps & SvgIconStyle) => {
       return <MessageEdit {...props} style={props.style} />;
     case 'ArrowForward':
       return <ArrowForward {...props} style={props.style} />;
+    case 'BlueCheckIcon':
+      return <BlueCheckIcon {...props} style={props.style} />;
+      
 
     default:
       return null;

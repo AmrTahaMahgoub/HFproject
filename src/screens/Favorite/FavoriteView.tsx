@@ -17,8 +17,9 @@ export const FavoriteScreenView = ({navigation}: NavigationProps) => {
       <View style={{paddingHorizontal: getHeight(16)}}>
         <Text style={styles.properties}>Properties</Text>
 
-        <View style={{height: '30%'}}>
+        <View>
           <FlatList
+            style={{height: '19%'}}
             showsVerticalScrollIndicator={false}
             data={DATA}
             renderItem={({item}) => (
@@ -31,9 +32,13 @@ export const FavoriteScreenView = ({navigation}: NavigationProps) => {
                 id={item.id}></Card>
             )}></FlatList>
         </View>
-        <Text style={styles.properties}>Blog posts</Text>
-        <View style={{height: '70%'}}>
+        <Text style={styles.Blogposts}>Blog posts</Text>
+        <View
+  
+        >
           <FlatList
+         style={{height: '100%',}}
+         
             showsVerticalScrollIndicator={false}
             data={DATA}
             renderItem={({item}) => (

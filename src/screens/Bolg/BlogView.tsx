@@ -1,10 +1,10 @@
 import {StackNavigationProp} from '@react-navigation/stack';
 import {FlatList, View} from 'react-native';
-import {TourCard,TitlesView} from '../../components/atoms';
+import {TourCard, TitlesView} from '../../components/atoms';
 import {MainHeader} from '../../components/organisms/Header/Header';
 import {getWidth} from '../../config/dimensions';
 import {BottomTabNavigatorTypes} from '../../navigations/types';
-import {TITLES, TOURTITLE} from '../../redux/Api/GetData';
+import {TITLES, TITLESLIST, TOURTITLE} from '../../redux/Api/GetData';
 import styles from './styles';
 
 type ScreenNavigationProp = StackNavigationProp<BottomTabNavigatorTypes>;
@@ -15,17 +15,18 @@ export const BlogView = ({navigation}: NavigationProps, state: any) => {
     <View>
       <MainHeader title={'Blog posts'} IsIconShown={false}></MainHeader>
       <View>
-        <View style={{paddingLeft:getWidth(16)}}>
+        <View style={{paddingLeft: getWidth(16)}}>
           <FlatList
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            data={TITLES}
+            data={TITLESLIST}
             renderItem={({item}) => (
-              <TitlesView title={item.key}></TitlesView>
+              <TitlesView title={item}></TitlesView>
             )}></FlatList>
         </View>
         <View style={styles.container}>
           <FlatList
+            style={{height: '84%'}}
             key={state.horizontal ? 'h' : 'v'}
             numColumns={2}
             showsVerticalScrollIndicator={false}

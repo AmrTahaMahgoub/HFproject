@@ -7,10 +7,12 @@ import {FavoriteScreenView} from '../screens/Favorite/FavoriteView';
 import {BottomTabNavigatorTypes} from './types';
 
 import {TabBottomComponent} from './TabBottomComponent/TabBottomComponent';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 const Stack = createBottomTabNavigator<BottomTabNavigatorTypes>();
 
 export function BottomTabNavigator() {
   return (
+ 
     <Stack.Navigator
       tabBar={props => <TabBottomComponent {...props} />}
       screenOptions={{headerShown: false}}>
@@ -35,5 +37,6 @@ export function BottomTabNavigator() {
         component={AccountView}
       />
     </Stack.Navigator>
+  
   );
 }

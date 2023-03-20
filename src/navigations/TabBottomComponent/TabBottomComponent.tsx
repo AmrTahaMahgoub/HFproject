@@ -61,20 +61,24 @@ function Item({route, isFocused, label, onPress}: any) {
     <TouchableOpacity activeOpacity={1} key={route.key} onPress={_onPress}>
       <View
         style={{
+          justifyContent:"space-between",
           flexDirection: 'row',
+          alignItems: 'center',
+          height: getHeight(50),
+        
           borderRadius: RFValue(50),
           backgroundColor: isFocused ? Colors.YELLOW : Colors.WHITE,
-          // paddingHorizontal: getWidth(16),
+        paddingHorizontal:getWidth(16),
           paddingVertical: getHeight(12),
         }}>
         <SvgIcon
           name={route.params.icon}
-          color={isFocused ? Colors.GREEN : Colors.GREEN}
+          
           width={getWidth(23)}
           height={getHeight(27)}
-          style={{marginLeft: getWidth(16)}}
+        
         />
-        <Text style={styles.navigationbartitle}>{label}</Text>
+        <Text style={styles.navigationbartitle}>{isFocused ?label:""}</Text>
       </View>
     </TouchableOpacity>
   );

@@ -1,3 +1,5 @@
+import { format } from 'prettier';
+
 export {DefaultButton, TouchButton as Button} from './Button/Button';
 export {CustomCheckBox} from './CheckBox/CustomCheckBox';
 export {Input} from './InPut/input';
@@ -9,3 +11,4 @@ export {TourCard} from "./TourCard/TourCard"
 export {TitlesView} from "./Titles/TitlesView";
 export{CustomAccountBox} from "./CustomAccount/CustomAccountView"
 export {CustomSharedData} from "./CustomSharedData/CustomSharedData"
+export {SortedFilter} from "./SortedFilter/SortedFilter"
