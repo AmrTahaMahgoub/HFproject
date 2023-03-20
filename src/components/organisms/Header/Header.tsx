@@ -1,22 +1,10 @@
 import React, {useState} from 'react';
-
-import {
-  View,
-  Text,
-  Pressable,
-  TextInput,
-  Button,
-  StyleSheet,
-  FlatList,
-} from 'react-native';
+import {View, Text, Pressable, TextInput} from 'react-native';
 import styles from './styles';
 import {ViewRow} from '../../atoms/ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
 import {CustomText16, CustomText18} from '../../atoms/Text/text';
-import {SortedFilter} from '../../atoms';
-
-import Modal from 'react-native-modal';
-import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
+import {DefaultButton, TouchableTextSvg, SortedFilter} from '../../atoms';
 import {ModalSheet} from '../../atoms/Modal/ModalSheet';
 
 type SimpleHeaderProps = {
@@ -77,20 +65,35 @@ export const ComplexHeader = (props: ComplexHeaderProps) => {
         </ViewRow>
 
         <SortedFilter onPressed={toggle}></SortedFilter>
-
         <ModalSheet
           isVisible={isModalVisible}
-          onSwipeComplete={() => setModalVisible(false)}
+          onSwipeComplete={() => {
+            setModalVisible(!isModalVisible);
+          }}
           swipeDirection={'down'}>
-          <View
-            style={{
-              height: getHeight(500),
-              width: '100%',
-              backgroundColor: 'white',
-              borderTopRightRadius: RFValue(8),
-              borderTopLeftRadius: RFValue(8),
-            }}>
-            <Text>Hello!</Text>
+          <View style={styles.maincontainer}>
+            <View style={styles.divider}></View>
+            <Text style={styles.maintitle}>SORTING BY</Text>
+            <View style={styles.textcontainer}>
+              <TouchableTextSvg
+                title={'Date ( Oldest post first )'}></TouchableTextSvg>
+              <TouchableTextSvg
+                title={'Date ( Newest post first )'}></TouchableTextSvg>
+              <TouchableTextSvg
+                title={'Price ( Lowest first )'}></TouchableTextSvg>
+              <TouchableTextSvg
+                title={'Price ( Highest first )'}></TouchableTextSvg>
+              <TouchableTextSvg
+                title={'Area ( Smallest area )'}></TouchableTextSvg>
+              <TouchableTextSvg
+                title={'Area ( Largest area )'}></TouchableTextSvg>
+            </View>
+            <DefaultButton
+              title={'Done'}
+              onpress={() => {
+                setModalVisible(false);
+              }}
+              style={styles.button}></DefaultButton>
           </View>
         </ModalSheet>
       </ViewRow>
@@ -116,4 +119,3 @@ export const MainHeader = (props: MainHeaderProps) => {
     </ViewRow>
   );
 };
-

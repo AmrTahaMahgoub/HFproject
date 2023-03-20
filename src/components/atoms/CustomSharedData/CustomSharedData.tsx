@@ -1,11 +1,11 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Image, Pressable, Text, View} from 'react-native';
 import {SvgIcon} from '../../../assets/svgs';
 
 import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
 import {Colors, Typography} from '../../../styles';
 
-export const CustomSharedData = ({icon, title, image}: any) => {
+export const CustomSharedData = ({icon, title,  onpress}: any) => {
   return (
     <View
       style={{
@@ -30,13 +30,15 @@ export const CustomSharedData = ({icon, title, image}: any) => {
           borderTopLeftRadius: RFValue(36),
           borderBottomLeftRadius: RFValue(25),
         }}></View>
-      <SvgIcon
+   
+    <SvgIcon
         name={icon}
         style={{marginLeft: getWidth(20), marginRight: getWidth(16)}}></SvgIcon>
+  
       <Text
         style={{
           flex:1,
-          //marginRight: getWidth(205),
+          
           fontFamily: Typography.BOLD_NUNITO,
           fontWeight: Typography.FONT_WEIGHT_REGULAR,
           lineHeight:Typography.FONT_SIZE_19,
@@ -44,9 +46,11 @@ export const CustomSharedData = ({icon, title, image}: any) => {
         }}>
         {title}
       </Text>
+       <Pressable onPress={onpress}>
       <SvgIcon
         style={{marginRight: getWidth(22)}}
         name="ArrowForward"></SvgIcon>
+          </Pressable>
     </View>
   );
 };

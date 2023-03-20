@@ -121,15 +121,31 @@ export const TITLES = [
   {key: 'Turkish Citizenship'},
   {key: 'Life'},
 ];
-export const TITLESLIST = [
-'ALL',
-'Turkey news',
-'Turkish Citizenship',
-'Life'
-
+export const MODALDATA = [
+  {key: 'Date ( Oldest post first )'},
+  {key: 'Date ( Newest post first )'},
+  {key: 'Price ( Lowest first )'},
+  {key: 'Price ( Highest first )'},
+  {key: 'Area ( Smallest area )'},
+  {key: 'Area ( Largest area )'},
 ];
+export const MODALDATALIST=['Date ( Oldest post first )',
+'Date ( Newest post first )',
+'Price ( Lowest first )',
+'Price ( Highest first )',
+'Area ( Smallest area )',
+'Area ( Largest area )'
+
+
+
+]
+export const TITLESLIST = ['ALL', 'Turkey news', 'Turkish Citizenship', 'Life'];
 export const ACCOUNT = [
-  {image: images.account, name: 'Mahmoud Ahmed', email: 'mahmoud.mail@gmail.com'},
+  {
+    image: images.account,
+    name: 'Mahmoud Ahmed',
+    email: 'mahmoud.mail@gmail.com',
+  },
 ];
 
 export const TOURTITLE = [

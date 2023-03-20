@@ -9,8 +9,8 @@ type ButtonProps = {
   name?: String;
 };
 
-export const DefaultButton = ({onpress, title, name}: ButtonProps) => (
-  <TouchableOpacity style={[styles.StandardButtonContainer]} onPress={onpress}>
+export const DefaultButton = ({onpress, title, name,style}: ButtonProps) => (
+  <TouchableOpacity style={[styles.StandardButtonContainer,style]} onPress={onpress}>
     <CustomTextSemiBold14>{title} </CustomTextSemiBold14>
     <CustomText19>{name}</CustomText19>
   </TouchableOpacity>

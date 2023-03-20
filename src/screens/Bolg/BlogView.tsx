@@ -19,9 +19,9 @@ export const BlogView = ({navigation}: NavigationProps, state: any) => {
           <FlatList
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            data={TITLESLIST}
+            data={TITLES}
             renderItem={({item}) => (
-              <TitlesView title={item}></TitlesView>
+              <TitlesView title={item.key}></TitlesView>
             )}></FlatList>
         </View>
         <View style={styles.container}>

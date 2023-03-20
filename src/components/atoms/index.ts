@@ -12,3 +12,5 @@ export {TitlesView} from "./Titles/TitlesView";
 export{CustomAccountBox} from "./CustomAccount/CustomAccountView"
 export {CustomSharedData} from "./CustomSharedData/CustomSharedData"
 export {SortedFilter} from "./SortedFilter/SortedFilter"
+export {ModalSheet} from "./Modal/ModalSheet"
+export {TouchableTextSvg} from "./TouchableTextSvg/TouchableTextSvg"
