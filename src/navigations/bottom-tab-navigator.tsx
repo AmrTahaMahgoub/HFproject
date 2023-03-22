@@ -5,9 +5,8 @@ import {AccountView} from '../screens/Account/AccountView';
 import {BlogView} from '../screens/Bolg/BlogView';
 import {FavoriteScreenView} from '../screens/Favorite/FavoriteView';
 import {BottomTabNavigatorTypes} from './types';
-
 import {TabBottomComponent} from './TabBottomComponent/TabBottomComponent';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
+
 const Stack = createBottomTabNavigator<BottomTabNavigatorTypes>();
 
 export function BottomTabNavigator() {

@@ -1,32 +1,25 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {useState} from 'react';
-import {
-  Alert,
-  FlatList,
-  Modal,
-  Pressable,
-  SafeAreaView,
-  Text,
-  View,
-} from 'react-native';
-
+import {FlatList, View} from 'react-native';
 import {Card} from '../../components/atoms';
-
 import {ComplexHeader} from '../../components/organisms/Header/Header';
 import {getHeight, getWidth} from '../../config/dimensions';
-import {BottomTabNavigatorTypes} from '../../navigations/types';
+import {StackNavigatorParamList} from '../../navigations/types';
 import {DATA} from '../../redux/Api/GetData';
 import {Colors} from '../../styles';
 
-type ScreenNavigationProp = StackNavigationProp<BottomTabNavigatorTypes>;
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
 export const HomeScreenView = ({navigation}: NavigationProps) => {
-  const [modalVisible, setModalVisible] = useState(false);
   return (
     <View>
-      <ComplexHeader title={'Search'} onPressed={() => {}}></ComplexHeader>
-      <SafeAreaView>
+      <ComplexHeader
+        title={'Search'}
+        onPressed={() => {
+          navigation.navigate('SignUpView');
+        }}></ComplexHeader>
+
+      <View>
         <View
           style={{
             paddingHorizontal: getWidth(16),
@@ -38,11 +31,13 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
                 height: '92%',
                 marginTop: getHeight(4),
               }}
-              // contentContainerStyle={{height: '90%', alignItems: 'center'}}
               showsVerticalScrollIndicator={false}
               data={DATA}
               renderItem={({item}) => (
                 <Card
+                  onpressed={() => {
+                    navigation.navigate('SpecificationsView');
+                  }}
                   biano={item.banio}
                   area={item.area}
                   bed={item.bed}
@@ -52,7 +47,7 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
               )}></FlatList>
           </View>
         </View>
-      </SafeAreaView>
+      </View>
     </View>
   );
 };

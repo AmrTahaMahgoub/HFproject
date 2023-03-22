@@ -346,3 +346,11 @@ export const TOURTITLE = [
     date: '07/01/2022',
   },
 ];
+export const SPECIFICATIONTYPE=[{
+  type:"type",
+  floor:"floor",
+  Garages:"Garages",
+  Usagecase:"Usage case",
+  Energyrating:"Energy rating",
+  Reference:"Reference"
+}]

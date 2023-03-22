@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleProp, TextStyle, View, ViewStyle} from 'react-native';
+import {StyleProp, TextStyle, View} from 'react-native';
 import styles from './styles';
 type ViewRowProps={
   children?: React.ReactNode,

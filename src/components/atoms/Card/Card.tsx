@@ -5,25 +5,21 @@ import {getHeight, RFValue} from '../../../config/dimensions';
 import {ImageTextRow} from '../ImageTextRow';
 import {ViewRow} from '../ViewRow';
 import styles from './styles';
-export const Card = ({biano, area, bed, image, price}: any) => {
+export const Card = ({biano, area, bed, image, price, onpressed}: any) => {
   let [isFavorite, setFavorite] = useState(false);
   return (
-    <View style={styles.container}>
-      <Image style={styles.image} source={image}></Image>
-      <View style={styles.contenent}>
-        <View
-          style={{
-           
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-           
-          }}>
-          <Text style={styles.price}>
-            {price}
-       
-          </Text>
-          <Pressable
+    <Pressable onPress={onpressed}>
+      <View style={styles.container}>
+        <Image style={styles.image} source={image}></Image>
+        <View style={styles.contenent}>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}>
+            <Text style={styles.price}>{price}</Text>
+            <Pressable
               onPress={() => {
                 setFavorite(!isFavorite);
               }}>
@@ -31,13 +27,12 @@ export const Card = ({biano, area, bed, image, price}: any) => {
                 name={isFavorite ? 'UnFavoriteIcon' : 'FavoriteIcon'}
                 style={styles.icon}></SvgIcon>
             </Pressable>
+          </View>
+          <ImageTextRow name="BedIcon" title={bed}></ImageTextRow>
+          <ImageTextRow name="AreaIcon" title={area}></ImageTextRow>
+          <ImageTextRow name="BanioIcon" title={biano}></ImageTextRow>
         </View>
-        <ImageTextRow name="BedIcon" title={bed}></ImageTextRow>
-        <ImageTextRow name="AreaIcon" title={area}></ImageTextRow>
-        <ImageTextRow name="BanioIcon" title={biano}></ImageTextRow>
-      
-        
       </View>
-    </View>
+    </Pressable>
   );
 };

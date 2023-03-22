@@ -5,6 +5,7 @@ import {MainHeader} from '../../components/organisms/Header/Header';
 import {getHeight} from '../../config/dimensions';
 import {BottomTabNavigatorTypes} from '../../navigations/types';
 import {DATA} from '../../redux/Api/GetData';
+import {Strings} from '../../styles';
 import styles from './styles';
 
 type ScreenNavigationProp = StackNavigationProp<BottomTabNavigatorTypes>;
@@ -15,7 +16,7 @@ export const FavoriteScreenView = ({navigation}: NavigationProps) => {
     <View>
       <MainHeader title={'Favorites'} IsIconShown={false}></MainHeader>
       <View style={{paddingHorizontal: getHeight(16)}}>
-        <Text style={styles.properties}>Properties</Text>
+        <Text style={styles.properties}>{Strings.PROPERITIES}</Text>
 
         <View>
           <FlatList
@@ -32,13 +33,10 @@ export const FavoriteScreenView = ({navigation}: NavigationProps) => {
                 id={item.id}></Card>
             )}></FlatList>
         </View>
-        <Text style={styles.Blogposts}>Blog posts</Text>
-        <View
-  
-        >
+        <Text style={styles.Blogposts}>{Strings.BLOGPOSTS}</Text>
+        <View>
           <FlatList
-         style={{height: '100%',}}
-         
+            style={{height: '100%'}}
             showsVerticalScrollIndicator={false}
             data={DATA}
             renderItem={({item}) => (

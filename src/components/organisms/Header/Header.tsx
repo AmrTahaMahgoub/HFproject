@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
-import {View, Text, Pressable, TextInput} from 'react-native';
+import {View, Text, Pressable, TextInput, ImageBackground} from 'react-native';
 import styles from './styles';
 import {ViewRow} from '../../atoms/ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
-import {CustomText16, CustomText18} from '../../atoms/Text/text';
+import {CustomText16} from '../../atoms/Text/text';
 import {DefaultButton, TouchableTextSvg, SortedFilter} from '../../atoms';
 import {ModalSheet} from '../../atoms/Modal/ModalSheet';
+import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
+import {Colors} from '../../../styles';
 
 type SimpleHeaderProps = {
   title?: string;
@@ -76,17 +78,23 @@ export const ComplexHeader = (props: ComplexHeaderProps) => {
             <Text style={styles.maintitle}>SORTING BY</Text>
             <View style={styles.textcontainer}>
               <TouchableTextSvg
-                title={'Date ( Oldest post first )'}></TouchableTextSvg>
+                title={'Date ( Oldest post first )'}
+                iconname="BlueCheckIcon"></TouchableTextSvg>
               <TouchableTextSvg
-                title={'Date ( Newest post first )'}></TouchableTextSvg>
+                title={'Date ( Newest post first )'}
+                iconname="BlueCheckIcon"></TouchableTextSvg>
               <TouchableTextSvg
-                title={'Price ( Lowest first )'}></TouchableTextSvg>
+                title={'Price ( Lowest first )'}
+                iconname="BlueCheckIcon"></TouchableTextSvg>
               <TouchableTextSvg
-                title={'Price ( Highest first )'}></TouchableTextSvg>
+                title={'Price ( Highest first )'}
+                iconname="BlueCheckIcon"></TouchableTextSvg>
               <TouchableTextSvg
-                title={'Area ( Smallest area )'}></TouchableTextSvg>
+                title={'Area ( Smallest area )'}
+                iconname="BlueCheckIcon"></TouchableTextSvg>
               <TouchableTextSvg
-                title={'Area ( Largest area )'}></TouchableTextSvg>
+                title={'Area ( Largest area )'}
+                iconname="BlueCheckIcon"></TouchableTextSvg>
             </View>
             <DefaultButton
               title={'Done'}
@@ -113,9 +121,46 @@ export const MainHeader = (props: MainHeaderProps) => {
           <SvgIcon name={'ArrowBack'}></SvgIcon>
         </Pressable>
       )}
-      <CustomText18 style={styles.mainheadertitle}>
-        <Text>{props.title}</Text>
-      </CustomText18>
+      <Text style={styles.mainheadertitle}>{props.title}</Text>
     </ViewRow>
+  );
+};
+export const ImageHeader = ({image, onPress}: any) => {
+  return (
+    <View>
+      <ImageBackground
+        source={image}
+        style={{height: getHeight(276), width: '100%'}}>
+        <ViewRow
+          style={{
+            justifyContent: 'space-between',
+            marginHorizontal: getWidth(20),
+          }}>
+          <Pressable onPress={onPress}>
+            <SvgIcon name="ArrowBack"></SvgIcon>
+          </Pressable>
+
+          <View
+            style={{
+              backgroundColor: Colors.DARKY_LIGHT_GRAY,
+              width: getWidth(40),
+              height: getHeight(40),
+
+              borderRadius: RFValue(50),
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Pressable>
+              <SvgIcon
+                name="FavoriteIcon"
+                style={{
+                  marginHorizontal: getWidth(10),
+                  marginVertical: getHeight(10),
+                }}></SvgIcon>
+            </Pressable>
+          </View>
+        </ViewRow>
+      </ImageBackground>
+    </View>
   );
 };

@@ -6,6 +6,10 @@ export type StackNavigatorParamList = {
   SignInView: undefined;
   PasswardResretView: undefined;
   BottomTabNavigator: undefined;
+  SpecificationsView:undefined;
+  TurkeyNewsView:undefined;
+  AboutUsView:undefined;
+  ContactUsView:undefined
 };
 export type BottomTabNavigatorTypes = {
   Home: {icon?: IconsName};

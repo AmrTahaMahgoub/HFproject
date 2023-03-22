@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE,
     width: getWidth(343),
     height: getHeight(120),
-
   },
 
   image: {
@@ -27,22 +26,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: getWidth(9),
     justifyContent: 'center',
     alignSelf: 'center',
-    
   },
   price: {
     fontFamily: Typography.BOLD_NUNITO,
     fontSize: Typography.FONT_SIZE_16,
     fontWeight: Typography.FONT_WEIGHT_BOLD,
     lineHeight: Typography.LINE_HEIGHT_24,
-    // marginBottom: getHeight(10),
   },
   icon: {
-     marginTop: getHeight(5.31),
-    // marginBottom: getHeight(80),
-    // marginRight: getWidth(16),
-    // alignSelf: 'flex-start',
-    // width: getWidth(24),
-    // height: getHeight(24),
+    marginTop: getHeight(5.31),
   },
 });
 export default styles;

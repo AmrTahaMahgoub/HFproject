@@ -7,6 +7,9 @@ export const images = {
     tour1:require("./img/tour1.png"),
     tour2:require("./img/tour2.png"),
      account:require("./img/account.png"),
+     bigsizebuilding:require("./img/bigsizebuilding.png"),
+     turkeynews:require("./img/turkeynews.png"),
+     contactus:require("./img/contactus.png"),
 
   };
  

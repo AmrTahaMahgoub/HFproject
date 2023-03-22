@@ -10,7 +10,7 @@ import {
 import styles from './style';
 import {ViewRow} from '../ViewRow';
 import {SvgIcon} from '../../../assets/svgs';
-import { IconsName } from '../../../@types/iconTypes';
+import {IconsName} from '../../../@types/iconTypes';
 
 type InputProps = {
   label?: string;
@@ -23,6 +23,7 @@ type InputProps = {
   keyboardType?: KeyboardTypeOptions | undefined;
   maxLength?: number;
   style?: StyleProp<ViewStyle> | undefined;
+  textinputstyle?: StyleProp<TextStyle> | undefined;
   icon?: IconsName;
   error?: string;
   withFlag?: boolean;
@@ -37,7 +38,7 @@ export const Input = (props: InputProps) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <ViewRow style={styles.container}>
+    <ViewRow style={[styles.container, props.textinputstyle]}>
       <SvgIcon name={props.icon} style={styles.lefticon}></SvgIcon>
       <TextInput
         editable={props.editable}

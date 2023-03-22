@@ -6,15 +6,12 @@ import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
 import {Toast, ViewRow} from '../../components/atoms';
 import {StackNavigationProp} from '@react-navigation/stack';
-
 import {Input, DefaultButton} from '../../components/atoms';
 import {TouchButton} from '../../components/atoms/Button/Button';
-import { StackNavigatorParamList } from '../../navigations/types';
-
+import {StackNavigatorParamList} from '../../navigations/types';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
-
 
 export const PasswardResretView = ({navigation}: NavigationProps) => {
   const [showToast, setShowToast] = useState(false);
@@ -28,7 +25,7 @@ export const PasswardResretView = ({navigation}: NavigationProps) => {
       <SimpleHeader
         title={'Reset password'}
         onPress={() => {
-          navigation.navigate('SignUpView');
+          navigation.navigate('SignInView');
         }}></SimpleHeader>
 
       <View style={styles.imagecontainer}>

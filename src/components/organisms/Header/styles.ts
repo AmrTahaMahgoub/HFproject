@@ -12,7 +12,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     flex: 1,
     flexWrap: 'wrap',
-    marginBottom: getHeight(19),
+    fontSize: Typography.FONT_SIZE_16,
+    fontFamily: Typography.REGULAR_NUNITO,
+    lineHeight: Typography.LINE_HEIGHT_20,
+    color: Colors.WHITE,
   },
   mainheader: {
     backgroundColor: Colors.PETROLUIM,
@@ -113,24 +116,24 @@ const styles = StyleSheet.create({
     borderTopEndRadius: RFValue(20),
     paddingTop: getHeight(20),
     paddingHorizontal: getWidth(24),
-   backgroundColor:Colors.WHITE
+    backgroundColor: Colors.WHITE,
   },
   textcontainer: {
-    flexDirection:"column",
+    flexDirection: 'column',
     justifyContent: 'space-between',
     marginTop: getHeight(24),
-    width:getWidth(327),
-    height:getHeight(274),
-    marginBottom:getHeight(40)
+    width: getWidth(327),
+    height: getHeight(274),
+    marginBottom: getHeight(40),
   },
   text: {
     fontSize: Typography.FONT_SIZE_14,
     fontFamily: Typography.REGULAR_NUNITO,
     fontWeight: Typography.FONT_WEIGHT_REGULAR500,
     color: Colors.PETROLUIM,
-    textAlign:"center"
+    textAlign: 'center',
   },
-  button:{marginTop:0,width:getWidth(327)}
+  button: {marginTop: 0, width: getWidth(327)},
 });
 
 export default styles;

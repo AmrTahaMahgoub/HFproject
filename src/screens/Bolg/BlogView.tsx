@@ -3,11 +3,11 @@ import {FlatList, View} from 'react-native';
 import {TourCard, TitlesView} from '../../components/atoms';
 import {MainHeader} from '../../components/organisms/Header/Header';
 import {getWidth} from '../../config/dimensions';
-import {BottomTabNavigatorTypes} from '../../navigations/types';
-import {TITLES, TITLESLIST, TOURTITLE} from '../../redux/Api/GetData';
+import {StackNavigatorParamList} from '../../navigations/types';
+import {TITLES, TOURTITLE} from '../../redux/Api/GetData';
 import styles from './styles';
 
-type ScreenNavigationProp = StackNavigationProp<BottomTabNavigatorTypes>;
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
 export const BlogView = ({navigation}: NavigationProps, state: any) => {
@@ -21,7 +21,11 @@ export const BlogView = ({navigation}: NavigationProps, state: any) => {
             showsHorizontalScrollIndicator={false}
             data={TITLES}
             renderItem={({item}) => (
-              <TitlesView title={item.key}></TitlesView>
+              <TitlesView
+                onpressed={() => {
+                  navigation.navigate('TurkeyNewsView');
+                }}
+                title={item.key}></TitlesView>
             )}></FlatList>
         </View>
         <View style={styles.container}>

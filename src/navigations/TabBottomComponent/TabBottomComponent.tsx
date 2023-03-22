@@ -1,14 +1,8 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {HomeScreenView} from '../../screens/HomeScreen/HomeScreenView';
-import {AccountView} from '../../screens/Account/AccountView';
-import {BlogView} from '../../screens/Bolg/BlogView';
-import {FavoriteScreenView} from '../../screens/Favorite/FavoriteView';
-import {BottomTabNavigatorTypes} from '.././types';
 import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import {Text, TouchableOpacity, View} from 'react-native';
 import {getHeight, getWidth, RFValue} from '../../config/dimensions';
-import {Colors, Typography} from '../../styles';
+import {Colors} from '../../styles';
 import {SvgIcon} from '../../assets/svgs';
 import styles from './styles';
 
@@ -61,24 +55,22 @@ function Item({route, isFocused, label, onPress}: any) {
     <TouchableOpacity activeOpacity={1} key={route.key} onPress={_onPress}>
       <View
         style={{
-          justifyContent:"space-between",
+          justifyContent: 'space-between',
           flexDirection: 'row',
           alignItems: 'center',
           height: getHeight(50),
-        
+
           borderRadius: RFValue(50),
           backgroundColor: isFocused ? Colors.YELLOW : Colors.WHITE,
-        paddingHorizontal:getWidth(16),
+          paddingHorizontal: getWidth(16),
           paddingVertical: getHeight(12),
         }}>
         <SvgIcon
           name={route.params.icon}
-          
           width={getWidth(23)}
           height={getHeight(27)}
-        
         />
-        <Text style={styles.navigationbartitle}>{isFocused ?label:""}</Text>
+        <Text style={styles.navigationbartitle}>{isFocused ? label : ''}</Text>
       </View>
     </TouchableOpacity>
   );

@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 import { getHeight, getWidth, RFValue } from '../../../config/dimensions';
 
-import {Colors, Typography} from '../../../styles';
+import {Colors} from '../../../styles';
 const styles = StyleSheet.create({
     listiconcontainer: {
         width: getHeight(48),

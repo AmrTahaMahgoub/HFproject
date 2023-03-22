@@ -1,19 +1,11 @@
-import { StackNavigationProp } from '@react-navigation/stack';
+import {StackNavigationProp} from '@react-navigation/stack';
 import React from 'react';
 import {View} from 'react-native';
-import { StackNavigatorParamList } from '../../navigations/types';
+import {StackNavigatorParamList} from '../../navigations/types';
 
-import { HomeScreenView } from './HomeScreenView';
-
-type ScreenNavigationProp = StackNavigationProp<
-StackNavigatorParamList
->;
-type NavigationProps={navigation:ScreenNavigationProp }
-const HomeScreen = ({navigation}:NavigationProps) => {
-  return (
-    <View>
-      {/* <HomeScreenView navigation={navigation}></HomeScreenView> */}
-    </View>
-  );
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
+type NavigationProps = {navigation: ScreenNavigationProp};
+const HomeScreen = ({navigation}: NavigationProps) => {
+  return <View></View>;
 };
 export default HomeScreen;

@@ -1,17 +1,15 @@
 import {useState} from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
+import {Text, View, Pressable} from 'react-native';
 import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
 import {Colors} from '../../../styles';
 import styles from './styles';
 
-
-export const TitlesView = ({title}:any) => {
- 
+type TitlesViewType = {title: any; onpressed: any};
+export const TitlesView = ({title, onpressed}: TitlesViewType) => {
   let [IsTouched, setTouched] = useState(false);
 
   return (
-    <TouchableOpacity
-      activeOpacity={1}
+    <Pressable
       onPress={() => {
         setTouched(!IsTouched);
       }}>
@@ -24,8 +22,10 @@ export const TitlesView = ({title}:any) => {
           marginHorizontal: getWidth(8),
           marginVertical: getHeight(21),
         }}>
-        <Text style={styles.text}>{title}</Text>
+        <Pressable onPress={onpressed}>
+          <Text style={styles.text}>{title}</Text>
+        </Pressable>
       </View>
-    </TouchableOpacity>
+    </Pressable>
   );
 };

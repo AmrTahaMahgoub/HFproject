@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Image} from 'react-native';
-import {Button, Input, ViewRow} from '../../components/atoms';
+import { Input, ViewRow} from '../../components/atoms';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
@@ -52,7 +52,7 @@ export const SignIView = ({navigation}: NavigationProps) => {
         <DefaultButton
           title={'Login'}
           onpress={() => {
-            console.log(' pressed');
+            navigation.navigate('PasswardResretView');
           }}
           style={undefined}></DefaultButton>
 

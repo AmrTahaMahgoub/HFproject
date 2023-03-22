@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Pressable, StyleProp, TextStyle} from 'react-native';
+import {View, Pressable} from 'react-native';
 import styles from './styles';
 import {RFValue} from '../../../config/dimensions';
 import Icon from 'react-native-vector-icons/FontAwesome';

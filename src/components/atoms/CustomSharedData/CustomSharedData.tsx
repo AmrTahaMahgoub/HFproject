@@ -1,56 +1,23 @@
 import React from 'react';
-import {Image, Pressable, Text, View} from 'react-native';
+import {Pressable, Text, View} from 'react-native';
 import {SvgIcon} from '../../../assets/svgs';
+import {getWidth} from '../../../config/dimensions';
+import styles from './styles';
 
-import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
-import {Colors, Typography} from '../../../styles';
-
-export const CustomSharedData = ({icon, title,  onpress}: any) => {
+export const CustomSharedData = ({icon, title, onpress}: any) => {
   return (
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
+    <Pressable onPress={onpress}>
+      <View style={styles.maincontainer}>
+        <View style={styles.yellowcontainer}></View>
 
-        height: getHeight(56),
-        width: getWidth(343),
-        marginHorizontal: getWidth(16),
-        backgroundColor: Colors.WHITE,
-        borderRadius: RFValue(4),
+        <SvgIcon name={icon} style={styles.yellowicon}></SvgIcon>
 
+        <Text style={styles.title}>{title}</Text>
 
-        marginBottom: getHeight(15),
-      }}>
-      <View
-        style={{
-          width: getHeight(4),
-          height: getHeight(56),
-          backgroundColor: Colors.YELLOW,
-          borderTopLeftRadius: RFValue(36),
-          borderBottomLeftRadius: RFValue(25),
-        }}></View>
-   
-    <SvgIcon
-        name={icon}
-        style={{marginLeft: getWidth(20), marginRight: getWidth(16)}}></SvgIcon>
-  
-      <Text
-        style={{
-          flex:1,
-          
-          fontFamily: Typography.BOLD_NUNITO,
-          fontWeight: Typography.FONT_WEIGHT_REGULAR,
-          lineHeight:Typography.FONT_SIZE_19,
-          color:Colors.BLACK
-        }}>
-        {title}
-      </Text>
-       <Pressable onPress={onpress}>
-      <SvgIcon
-        style={{marginRight: getWidth(22)}}
-        name="ArrowForward"></SvgIcon>
-          </Pressable>
-    </View>
+        <SvgIcon
+          style={{marginRight: getWidth(22)}}
+          name="ArrowForward"></SvgIcon>
+      </View>
+    </Pressable>
   );
 };

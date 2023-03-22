@@ -20,6 +20,19 @@ export type IconsName =
   |"ProfileCircle"
   |"InternetCircule"
   |"BlueCheckIcon"
+  |"SharedYellowIcon"
+  |"NavigationPetroluimIcon"
+  |"MapIcon"
+  |"Type"
+  |"Floor"
+  |"Garage"
+  |"Star"
+  |"Pen"
+  |"CheckYellowIcon"
+  |"CallNow"
+  |"PetroluimCallNow"
+  |"PetroluimMessage"
+  |"SendIcon"
 
 export interface IconsProps {
   color?: string;
