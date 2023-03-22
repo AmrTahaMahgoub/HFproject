@@ -3,8 +3,8 @@ import Svg, { Path, SvgProps } from "react-native-svg"
 
 const ArrowBack = (props:SvgProps) => (
   <Svg
-    width={24}
-    height={24}
+    width={15}
+    height={20}
     fill="none"
     
     {...props}

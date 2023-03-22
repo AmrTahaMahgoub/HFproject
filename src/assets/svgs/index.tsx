@@ -39,6 +39,7 @@ import CallNow from './CallNow';
 import PetroluimCallNow from './PetroluimCallNow';
 import PetroluimMessage from './PetroluimMessage';
 import SendIcon from './SendIcon';
+import { ViewStyle } from 'react-native';
 
 export interface IconsProps {
   color?: string;

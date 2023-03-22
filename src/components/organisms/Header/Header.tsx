@@ -43,9 +43,6 @@ export const ComplexHeader = (props: ComplexHeaderProps) => {
   return (
     <View style={styles.complexheader}>
       <ViewRow style={styles.searchbar}>
-        <Pressable onPress={props.onPressed}>
-          <SvgIcon name={'ArrowBack'}></SvgIcon>
-        </Pressable>
         <CustomText16 style={styles.headertitle}>
           <Text>{props.title}</Text>
         </CustomText16>
@@ -118,7 +115,7 @@ export const MainHeader = (props: MainHeaderProps) => {
     <ViewRow style={styles.mainheader}>
       {props.IsIconShown && (
         <Pressable onPress={props.onPressed}>
-          <SvgIcon name={'ArrowBack'}></SvgIcon>
+          <SvgIcon name={'ArrowBack'} ></SvgIcon>
         </Pressable>
       )}
       <Text style={styles.mainheadertitle}>{props.title}</Text>

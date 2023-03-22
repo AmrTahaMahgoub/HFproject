@@ -12,9 +12,8 @@ import {
 import {MainHeader} from '../../components/organisms/Header/Header';
 import {StackNavigatorParamList} from '../../navigations/types';
 import {ACCOUNT} from '../../redux/Api/GetData';
-import { Strings } from '../../styles';
+import {Strings} from '../../styles';
 import styles from './styles';
-
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
@@ -80,7 +79,12 @@ export const AccountView = ({navigation}: NavigationProps) => {
         }}
         icon="MessageEdit"
         title={'Contact us'}></CustomSharedData>
-      <CustomSharedData icon="MessageEdit" title={'Logout'}></CustomSharedData>
+      <CustomSharedData
+        onpress={() => {
+          navigation.navigate('SignUpView');
+        }}
+        icon="MessageEdit"
+        title={'Logout'}></CustomSharedData>
     </View>
   );
 };

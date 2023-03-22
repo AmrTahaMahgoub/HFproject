@@ -1,21 +1,16 @@
 import {View, Image, ScrollView} from 'react-native';
-import {Button, CustomCheckBox, Input, ViewRow} from '../../components/atoms';
-import {
-  CustomText16,
-  CustomTextRgular14,
-} from '../../components/atoms/Text/text';
+import {CustomCheckBox, Input, ViewRow} from '../../components/atoms';
+import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
-
 import {images} from '../../assets';
 import {DefaultButton, TouchButton} from '../../components/atoms/Button/Button';
 import {StackNavigationProp} from '@react-navigation/stack';
-import { StackNavigatorParamList } from '../../navigations/types';
-
+import {StackNavigatorParamList} from '../../navigations/types';
+import {Strings} from '../../styles';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
-
 
 export const SignUpView = ({navigation}: NavigationProps) => {
   return (
@@ -30,7 +25,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
         <View style={styles.imagecontainer}>
           <Image style={styles.imagestyle} source={images.logo} />
 
-          <CustomTextRgular14>Name</CustomTextRgular14>
+          <CustomTextRgular14>{Strings.NAME}</CustomTextRgular14>
           <Input
             icon={'ProfileIcon'}
             password={false}
@@ -41,7 +36,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
             onChangeText={() => {}}
             placeholder={'Enter your name...'}
           />
-          <CustomTextRgular14>Phone</CustomTextRgular14>
+          <CustomTextRgular14>{Strings.PHONE}</CustomTextRgular14>
           <Input
             icon={'HeadPhoneIcon'}
             password={false}
@@ -52,7 +47,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
             onChangeText={() => {}}
             placeholder={'EX:01069636927'}
           />
-          <CustomTextRgular14>Email</CustomTextRgular14>
+          <CustomTextRgular14>{Strings.EMAIL}</CustomTextRgular14>
           <Input
             icon={'SmsIcon'}
             password={false}
@@ -63,7 +58,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
             onChangeText={() => {}}
             placeholder={'Enter your email...'}
           />
-          <CustomTextRgular14>Password</CustomTextRgular14>
+          <CustomTextRgular14>{Strings.PASSWORD}</CustomTextRgular14>
           <Input
             icon={'KeyIcon'}
             password={true}
@@ -76,9 +71,9 @@ export const SignUpView = ({navigation}: NavigationProps) => {
           />
           <ViewRow>
             <CustomCheckBox></CustomCheckBox>
-            <CustomTextRgular14>I agree to</CustomTextRgular14>
+            <CustomTextRgular14>{Strings.IAGREETO}</CustomTextRgular14>
             <CustomTextRgular14 style={styles.termsandcondition}>
-              Terms & Conditions
+              {Strings.TERMSCONDITIONS}
             </CustomTextRgular14>
           </ViewRow>
           <DefaultButton
@@ -89,7 +84,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
             }}></DefaultButton>
 
           <ViewRow style={styles.mixedrow}>
-            <CustomTextRgular14>Have account? </CustomTextRgular14>
+            <CustomTextRgular14>{Strings.HAVEACCOUNT}</CustomTextRgular14>
             <TouchButton
               style={styles.registernow}
               title={'Login'}

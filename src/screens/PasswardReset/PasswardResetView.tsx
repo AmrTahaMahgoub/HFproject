@@ -9,6 +9,7 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {Input, DefaultButton} from '../../components/atoms';
 import {TouchButton} from '../../components/atoms/Button/Button';
 import {StackNavigatorParamList} from '../../navigations/types';
+import { Strings } from '../../styles';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
@@ -30,7 +31,7 @@ export const PasswardResretView = ({navigation}: NavigationProps) => {
 
       <View style={styles.imagecontainer}>
         <Image style={styles.imagestyle} source={images.logo} />
-        <CustomTextRgular14>Email</CustomTextRgular14>
+        <CustomTextRgular14>{Strings.EMAIL}</CustomTextRgular14>
         <Input
           icon={'SmsIcon'}
           password={false}
@@ -51,7 +52,7 @@ export const PasswardResretView = ({navigation}: NavigationProps) => {
         </Modal>
 
         <ViewRow style={styles.mixedrow}>
-          <CustomTextRgular14>Need help ? </CustomTextRgular14>
+          <CustomTextRgular14>{Strings.NEEDHELP}</CustomTextRgular14>
           <TouchButton
             style={styles.contactus}
             title={'Contact us'}

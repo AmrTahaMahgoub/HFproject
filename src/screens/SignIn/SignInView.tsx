@@ -1,17 +1,17 @@
 import React from 'react';
 import {View, Image} from 'react-native';
-import { Input, ViewRow} from '../../components/atoms';
+import {Input, ViewRow} from '../../components/atoms';
 import {CustomTextRgular14} from '../../components/atoms/Text/text';
 import styles from './styles';
 import {SimpleHeader} from '../../components/organisms/Header/Header';
 import {images} from '../../assets';
 import {DefaultButton, TouchButton} from '../../components/atoms/Button/Button';
 import {StackNavigationProp} from '@react-navigation/stack';
-import { StackNavigatorParamList } from '../../navigations/types';
+import {StackNavigatorParamList} from '../../navigations/types';
+import {Strings} from '../../styles';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
-
 
 export const SignIView = ({navigation}: NavigationProps) => {
   return (
@@ -24,7 +24,7 @@ export const SignIView = ({navigation}: NavigationProps) => {
 
       <View style={styles.imagecontainer}>
         <Image style={styles.imagestyle} source={images.logo} />
-        <CustomTextRgular14>Email</CustomTextRgular14>
+        <CustomTextRgular14>{Strings.EMAIL}</CustomTextRgular14>
         <Input
           icon={'SmsIcon'}
           password={false}
@@ -35,7 +35,7 @@ export const SignIView = ({navigation}: NavigationProps) => {
           onChangeText={() => {}}
           placeholder={'Enter your email...'}
         />
-        <CustomTextRgular14>Password</CustomTextRgular14>
+        <CustomTextRgular14>{Strings.PASSWORD}</CustomTextRgular14>
         <Input
           icon={'KeyIcon'}
           password={true}
@@ -47,7 +47,7 @@ export const SignIView = ({navigation}: NavigationProps) => {
           placeholder={'Enter your password...'}
         />
         <CustomTextRgular14 style={styles.forgotpassword}>
-          Forgot Password ?
+          {Strings.FORGOTPASSWORD}
         </CustomTextRgular14>
         <DefaultButton
           title={'Login'}
@@ -57,7 +57,7 @@ export const SignIView = ({navigation}: NavigationProps) => {
           style={undefined}></DefaultButton>
 
         <ViewRow style={styles.mixedrow}>
-          <CustomTextRgular14>Don’t have account? </CustomTextRgular14>
+          <CustomTextRgular14>{Strings.DONTHAVEACCOUNT}</CustomTextRgular14>
           <TouchButton
             style={styles.registernow}
             title={'Register now'}
@@ -65,7 +65,6 @@ export const SignIView = ({navigation}: NavigationProps) => {
               navigation.navigate('SignUpView');
             }}></TouchButton>
         </ViewRow>
-        <View></View>
       </View>
     </View>
   );

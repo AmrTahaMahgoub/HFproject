@@ -1,10 +1,8 @@
-import {View, Image, ScrollView, Text} from 'react-native';
-
+import {View, ScrollView, Text} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {StackNavigatorParamList} from '../../navigations/types';
 import {ImageHeader} from '../../components/organisms/Header/Header';
-import {getHeight, getWidth} from '../../config/dimensions';
-import {Colors, Typography} from '../../styles';
+import {Colors, Strings} from '../../styles';
 import {
   ViewRow,
   DataSpecificationContainer,
@@ -13,7 +11,7 @@ import {
 } from '../../components/atoms';
 import {SvgIcon} from '../../assets/svgs';
 import styles from './styles';
-import { images } from '../../assets';
+import {images} from '../../assets';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
@@ -22,14 +20,18 @@ export const SpecificationsView = ({navigation}: NavigationProps) => {
   return (
     <ScrollView>
       <View>
-        <ImageHeader onPress={()=>{navigation.goBack()}}  image={images.bigsizebuilding} ></ImageHeader>
+        <ImageHeader
+          onPress={() => {
+            navigation.goBack();
+          }}
+          image={images.bigsizebuilding}></ImageHeader>
       </View>
       <View style={styles.projectcontainer}>
         <ViewRow style={styles.projecttexticoncontainer}>
-          <Text style={styles.projecttext}>Project</Text>
+          <Text style={styles.projecttext}>{Strings.PROJECT}</Text>
           <SvgIcon name={'SharedYellowIcon'}></SvgIcon>
         </ViewRow>
-        <Text style={styles.price}>1,250,000 TL</Text>
+        <Text style={styles.price}>{Strings.MONEY}</Text>
 
         <IconText
           texttitle={'Istanboul, Turkey'}
@@ -69,15 +71,10 @@ export const SpecificationsView = ({navigation}: NavigationProps) => {
         </View>
       </DataSpecificationContainer>
       <DataSpecificationContainer title={'Discription'}>
-        <Text style={styles.descriptiontext}>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here
-        </Text>
+        <Text style={styles.descriptiontext}>{Strings.DESCRIPTION}</Text>
       </DataSpecificationContainer>
       <DataSpecificationContainer title={'Extras'}>
-      <View style={styles.specificationcontainer}>
+        <View style={styles.specificationcontainer}>
           <View style={styles.firstspecicloumndata}>
             <IconText
               texttitle={'24/7 Security'}
@@ -91,7 +88,7 @@ export const SpecificationsView = ({navigation}: NavigationProps) => {
               texttitle={'Indoor parking'}
               svgname={'CheckYellowIcon'}
               textstyle={styles.Specificationstext}></IconText>
-               <IconText
+            <IconText
               texttitle={'Green areas'}
               svgname={'CheckYellowIcon'}
               textstyle={styles.Specificationstext}></IconText>
@@ -109,7 +106,7 @@ export const SpecificationsView = ({navigation}: NavigationProps) => {
               texttitle={'Sauna'}
               svgname={'CheckYellowIcon'}
               textstyle={styles.Specificationstext}></IconText>
-                  <IconText
+            <IconText
               texttitle={'Gym'}
               svgname={'CheckYellowIcon'}
               textstyle={styles.Specificationstext}></IconText>
@@ -120,10 +117,12 @@ export const SpecificationsView = ({navigation}: NavigationProps) => {
         <DefaultButton>
           <IconText texttitle={'Open Map'} svgname={'MapIcon'}></IconText>
         </DefaultButton>
-       
       </DataSpecificationContainer>
-      <DefaultButton style={{backgroundColor:Colors.PETROLUIM}}>
-      <IconText texttitle={'Call Now'} textstyle={{color:Colors.WHITE}} svgname={'CallNow'}></IconText>
+      <DefaultButton style={{backgroundColor: Colors.PETROLUIM}}>
+        <IconText
+          texttitle={'Call Now'}
+          textstyle={{color: Colors.WHITE}}
+          svgname={'CallNow'}></IconText>
       </DefaultButton>
     </ScrollView>
   );

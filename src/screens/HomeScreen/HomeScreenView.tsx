@@ -15,9 +15,7 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
     <View>
       <ComplexHeader
         title={'Search'}
-        onPressed={() => {
-          navigation.navigate('SignUpView');
-        }}></ComplexHeader>
+      ></ComplexHeader>
 
       <View>
         <View

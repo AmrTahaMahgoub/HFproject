@@ -1,16 +1,9 @@
-import {View, Image, ScrollView, Text} from 'react-native';
-
+import {View, ScrollView, Text} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {StackNavigatorParamList} from '../../navigations/types';
 import {ImageHeader} from '../../components/organisms/Header/Header';
 import {getHeight, getWidth, RFValue} from '../../config/dimensions';
-import {Colors, Typography} from '../../styles';
-import {
-  ViewRow,
-  DataSpecificationContainer,
-  DefaultButton,
-  IconText,
-} from '../../components/atoms';
+import {Colors, Strings, Typography} from '../../styles';
 import {SvgIcon} from '../../assets/svgs';
 import {images} from '../../assets';
 
@@ -54,7 +47,7 @@ export const TurkeyNewsView = ({navigation}: NavigationProps) => {
 
                 textAlign: 'center',
               }}>
-              Turkey news
+              {Strings.TURKEYNEWS}
             </Text>
           </View>
           <SvgIcon name="SharedYellowIcon"></SvgIcon>
@@ -67,7 +60,7 @@ export const TurkeyNewsView = ({navigation}: NavigationProps) => {
             fontWeight: Typography.FONT_WEIGHT_BOLD,
             color: Colors.PETROLUIM,
           }}>
-          The title of the post here
+          {Strings.THETITLEOFTHEPOSTHERE}
         </Text>
         <Text
           style={{
@@ -77,7 +70,7 @@ export const TurkeyNewsView = ({navigation}: NavigationProps) => {
 
             color: Colors.DARKY_LIGHT_GRAY,
           }}>
-          07/01/2022
+          {Strings.DATE}
         </Text>
       </View>
       <View
@@ -97,10 +90,7 @@ export const TurkeyNewsView = ({navigation}: NavigationProps) => {
             color: Colors.DARKY_LIGHT_GRAY,
             marginBottom: getHeight(16),
           }}>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here
+          {Strings.TURKEYNEWSCONTENET}
         </Text>
         <Text
           style={{
@@ -110,10 +100,7 @@ export const TurkeyNewsView = ({navigation}: NavigationProps) => {
             marginBottom: getHeight(16),
             color: Colors.DARKY_LIGHT_GRAY,
           }}>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here
+          {Strings.TURKEYNEWSCONTENET}
         </Text>
         <Text
           style={{
@@ -123,10 +110,7 @@ export const TurkeyNewsView = ({navigation}: NavigationProps) => {
 
             color: Colors.DARKY_LIGHT_GRAY,
           }}>
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here
+          {Strings.TURKEYNEWSCONTENET}
         </Text>
       </View>
     </ScrollView>
