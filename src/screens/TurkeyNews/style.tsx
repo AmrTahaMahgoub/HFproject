@@ -1,69 +1,59 @@
 import {StyleSheet} from 'react-native';
-import {getWidth, getHeight} from '../../config/dimensions';
+import {getWidth, getHeight, RFValue} from '../../config/dimensions';
 import {Colors, Typography} from '../../styles';
 
 const styles = StyleSheet.create({
-  Specificationstext: {
-    fontSize: Typography.FONT_SIZE_12,
-    fontFamily: Typography.BOLD_NUNITO,
-    lineHeight: Typography.LINE_HEIGHT_16,
-    color: Colors.BLACK,
-  },
-  projectcontainer: {
-    width: '100%',
-    height: getHeight(115),
+  maincontainer:{
+    width: getWidth(375),
+    height: getHeight(117),
+    paddingVertical: getHeight(20),
+    paddingHorizontal: getWidth(16),
     backgroundColor: Colors.WHITE,
-    justifyContent: 'space-between',
-    paddingHorizontal: getWidth(24),
-    paddingVertical: getHeight(16),
+    marginBottom: getHeight(12),
   },
-  projecttexticoncontainer: {
-    justifyContent: 'space-between',
-    alignContent: 'center',
+  texticonrow:{flexDirection: 'row', justifyContent: 'space-between'},
+  textcontainer:{
+    backgroundColor: Colors.YELLOW,
+    borderRadius: RFValue(4),
+    justifyContent: 'center',
+    paddingHorizontal: getWidth(8),
+    height: getHeight(24),
+    width: getWidth(80),
   },
-  projecttext: {
-    fontSize: Typography.FONT_SIZE_14,
-    fontFamily: Typography.REGULAR_NUNITO,
-    fontWeight: Typography.FONT_WEIGHT_REGULAR500,
+  text:{
+    fontSize: Typography.FONT_SIZE_11,
+    fontFamily: Typography.LIGHT_MANROPE,
+    lineHeight: Typography.LINE_HEIGHT_15,
+    textAlign: 'center',
+  },
+  longtext:{
+    fontSize: Typography.FONT_SIZE_16,
+    fontFamily: Typography.BOLD_NUNITO,
     lineHeight: Typography.LINE_HEIGHT_20,
-    color: Colors.PETROLUIM,
-  },
-  price: {
-    fontSize: Typography.FONT_SIZE_18,
-    fontFamily: Typography.REGULAR_NUNITO,
     fontWeight: Typography.FONT_WEIGHT_BOLD,
-    lineHeight: Typography.LINE_HEIGHT_24,
     color: Colors.PETROLUIM,
   },
-  navigationicontext: {
+  date:{
     fontSize: Typography.FONT_SIZE_14,
-    fontFamily: Typography.REGULAR_NUNITO,
-    lineHeight: Typography.LINE_HEIGHT_20,
-    color: Colors.LIGHT_GRAY,
-  },
-  specificationcontainer: {
-    flexDirection: 'row',
-    height: getHeight(100),
-    width: getWidth(327),
-  },
-  firstspecicloumndata: {
-    flexDirection: 'column',
-    marginRight: getWidth(100),
-    justifyContent: 'space-between',
-    alignContent: 'space-between',
-  },
-  secontspeciccolumndata: {
-    flexDirection: 'column',
-    marginRight: getWidth(100),
-    justifyContent: 'space-between',
-    alignContent: 'space-between',
-  },
-  descriptiontext: {
-    fontSize: Typography.FONT_SIZE_12,
-    fontFamily: Typography.REGULAR_NUNITO,
-    fontWeight: Typography.FONT_WEIGHT_REGULAR,
+    fontFamily: Typography.REGULAR_MULISH,
     lineHeight: Typography.LINE_HEIGHT_16,
-    color: Colors.SEMI_BLACK,
+    color: Colors.DARKY_LIGHT_GRAY,
   },
+  newscontenetview:{
+    backgroundColor: Colors.WHITE,
+    paddingHorizontal: getWidth(16),
+    paddingVertical: getHeight(16),
+    height: getHeight(406),
+    width: getWidth(375),
+  },
+  newstext:{
+    fontSize: Typography.FONT_SIZE_14,
+    fontFamily: Typography.MEDIUM_NUNITO,
+    lineHeight: Typography.LINE_HEIGHT_16,
+    color: Colors.DARKY_LIGHT_GRAY,
+    marginBottom: getHeight(16),
+  },
+  
+  
 });
 export default styles;
