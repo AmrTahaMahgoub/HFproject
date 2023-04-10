@@ -1,7 +1,7 @@
-import {StackNavigationProp} from '@react-navigation/stack';
-import React, {useState} from 'react';
+import { StackNavigationProp } from '@react-navigation/stack';
+import React, { useState } from 'react';
 
-import {FlatList, Text, View} from 'react-native';
+import { FlatList, Text, View, Vibration } from 'react-native';
 import {
   CustomAccountBox,
   CustomSharedData,
@@ -9,21 +9,26 @@ import {
   ModalSheet,
   TouchableTextSvg,
 } from '../../components/atoms';
-import {MainHeader} from '../../components/organisms/Header/Header';
-import {StackNavigatorParamList} from '../../navigations/types';
-import {ACCOUNT} from '../../redux/Api/GetData';
-import {Strings} from '../../styles';
+import { MainHeader } from '../../components/organisms/Header/Header';
+import { StackNavigatorParamList } from '../../navigations/types';
+import { ACCOUNT } from '../../redux/Api/GetData';
+import { Strings } from '../../styles';
 import styles from './styles';
 
-type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
-type NavigationProps = {navigation: ScreenNavigationProp};
+import { TouchableWithoutFeedback, Animated } from 'react-native';
 
-export const AccountView = ({navigation}: NavigationProps) => {
+type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
+type NavigationProps = { navigation: ScreenNavigationProp };
+
+export const AccountView = ({ navigation }: NavigationProps) => {
+
   const [isModalVisible, setModalVisible] = useState(false);
 
   const toggle = () => {
+    Vibration.vibrate(200);
     setModalVisible(!isModalVisible);
   };
+
 
   return (
     <View>
@@ -31,18 +36,25 @@ export const AccountView = ({navigation}: NavigationProps) => {
       <FlatList
         showsVerticalScrollIndicator={false}
         data={ACCOUNT}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <CustomAccountBox
             image={item.image}
             name={item.name}
             email={item.email}></CustomAccountBox>
         )}></FlatList>
-
+    
+      
+          <CustomSharedData
+            onpress={() => {
+              
+              Vibration.vibrate(200);
+            }}
+            icon="ProfileCircle"
+            title={'profile'}></CustomSharedData>
+       
       <CustomSharedData
-        icon="ProfileCircle"
-        title={'profile'}></CustomSharedData>
-      <CustomSharedData
-        onpress={toggle}
+        onpress={
+          toggle}
         icon="InternetCircule"
         title={'Change language'}></CustomSharedData>
       <ModalSheet
@@ -62,6 +74,7 @@ export const AccountView = ({navigation}: NavigationProps) => {
           <DefaultButton
             title={'change'}
             onpress={() => {
+
               setModalVisible(false);
             }}
             style={styles.button}></DefaultButton>
@@ -69,18 +82,21 @@ export const AccountView = ({navigation}: NavigationProps) => {
       </ModalSheet>
       <CustomSharedData
         onpress={() => {
+          Vibration.vibrate(200);
           navigation.navigate('AboutUsView');
         }}
         icon="ExcelemationCircule"
         title={'About us'}></CustomSharedData>
       <CustomSharedData
         onpress={() => {
+          Vibration.vibrate(200);
           navigation.navigate('ContactUsView');
         }}
         icon="MessageEdit"
         title={'Contact us'}></CustomSharedData>
       <CustomSharedData
         onpress={() => {
+          Vibration.vibrate(200);
           navigation.navigate('SignUpView');
         }}
         icon="MessageEdit"
