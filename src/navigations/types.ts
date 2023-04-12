@@ -1,6 +1,7 @@
 import { IconsName } from "../@types/iconTypes";
 
 export type StackNavigatorParamList = {
+  Test:undefined;
   Splash: undefined;
   SignUpView: undefined;
   SignInView: undefined;

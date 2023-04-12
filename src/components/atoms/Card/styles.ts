@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.WHITE,
     width: getWidth(343),
     height: getHeight(120),
+    elevation:2
   },
 
   image: {

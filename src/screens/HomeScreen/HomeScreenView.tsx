@@ -1,16 +1,18 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {FlatList, View} from 'react-native';
+import {Animated, FlatList, View} from 'react-native';
 import {Card} from '../../components/atoms';
 import {ComplexHeader} from '../../components/organisms/Header/Header';
 import {getHeight, getWidth} from '../../config/dimensions';
 import {StackNavigatorParamList} from '../../navigations/types';
 import {DATA} from '../../redux/Api/GetData';
 import {Colors} from '../../styles';
+import { useRef } from 'react';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
 export const HomeScreenView = ({navigation}: NavigationProps) => {
+  const scrollY = useRef(new Animated.Value(0)).current;
   return (
     <View>
       <ComplexHeader
@@ -24,15 +26,34 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
             backgroundColor: Colors.OFF_WHITE,
           }}>
           <View>
-            <FlatList
+            <Animated.FlatList
+                onScroll={Animated.event([{ nativeEvent: { contentOffset: { y: scrollY } } }],
+                  { useNativeDriver: true })}
               style={{
                 height: '92%',
                 marginTop: getHeight(4),
               }}
               showsVerticalScrollIndicator={false}
               data={DATA}
-              renderItem={({item}) => (
-                <Card
+              renderItem={({item ,index}) => {
+                const inputRange = [
+                  -1, 0, 100 * index, 400 * (index + 2)
+              ]
+              const opacityInputRange = [
+                  -1, 0, 1 * index, 350 * (index + 0.1)
+              ]
+              const scale = scrollY.interpolate({
+                  inputRange,
+                  outputRange: [1, 1, 1, 0]
+              })
+              const opacity = scrollY.interpolate({
+                  inputRange: opacityInputRange,
+                  outputRange: [1, 1, 1, 0]
+              })
+                
+                return<Card
+                style={{transform:[{scale}],
+                opacity:opacity}}
                   onpressed={() => {
                     navigation.navigate('SpecificationsView');
                   }}
@@ -42,7 +63,7 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
                   image={item.image}
                   price={item.price}
                   id={item.id}></Card>
-              )}></FlatList>
+}}></Animated.FlatList>
           </View>
         </View>
       </View>

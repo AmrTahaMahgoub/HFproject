@@ -10,12 +10,14 @@ import {SpecificationsView} from '../screens/Specifications/Specifications';
 import { TurkeyNewsView } from '../screens/TurkeyNews/TurketNews';
 import { AboutUsView } from '../screens/AboutUs/AboutUsView';
 import { ContactUsView } from '../screens/ContactUs/ContactUsView';
+import Test from '../screens/Test';
 
 const Stack = createStackNavigator<StackNavigatorParamList>();
 
 export function AppStackNavigator() {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
+      {/* <Stack.Screen name="Test" component={Test} /> */}
       <Stack.Screen name="Splash" component={Splash} />
       <Stack.Screen name="SignUpView" component={SignUpView} />
       <Stack.Screen name="SignInView" component={SignIView} />
