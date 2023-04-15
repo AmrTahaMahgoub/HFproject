@@ -12,6 +12,7 @@ import {Strings} from '../../styles';
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
+
 export const SignUpView = ({navigation}: NavigationProps) => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>

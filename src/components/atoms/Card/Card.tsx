@@ -8,7 +8,7 @@ import styles from './styles';
 import { Colors } from '../../../styles';
 import { transform } from '@babel/core';
 type CardType = {
-  biano: any, area: any, bed: any, image: any, price: any, onpressed: () => void, style?: any, id :any
+  biano: any, area: any, bed: any, image: any, price: any, onpressed?: () => void, style?: any, id :any
 }
 export const Card = ({ biano, area, bed, image, price, onpressed, style }: CardType) => {
   let [isFavorite, setFavorite] = useState(false);

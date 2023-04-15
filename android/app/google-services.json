@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1094645130763",
+    "project_id": "hfproject-93b58",
+    "storage_bucket": "hfproject-93b58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094645130763:android:103ee559266679b021890e",
+        "android_client_info": {
+          "package_name": "com.hfproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094645130763-qjecau37nm249vrn6rbkuqqdnsgosdsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBELSKSzbHq-ROhTCsSqiisgttP6hZgp-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094645130763-qjecau37nm249vrn6rbkuqqdnsgosdsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
