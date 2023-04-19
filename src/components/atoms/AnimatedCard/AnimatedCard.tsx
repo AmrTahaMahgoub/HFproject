@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Image, Text, View, Pressable, Animated, StyleProp, ViewStyle } from 'react-native';
+import { Image, Text, View, Pressable, Animated, StyleProp, ViewStyle, ImageSourcePropType } from 'react-native';
 import { SvgIcon } from '../../../assets/svgs';
 import { getHeight, getWidth, RFValue } from '../../../config/dimensions';
 import { ImageTextRow } from '../ImageTextRow';
@@ -8,9 +8,9 @@ import styles from './styles';
 import { Colors } from '../../../styles';
 import { transform } from '@babel/core';
 type CardType = {
-  biano: any, area: any, bed: any, image: any, price: any, onpressed?: () => void, style?: any, id :any
+  biano: any, area: any, bed: any, image?: any, price: any, onpressed?: () => void, style?: any, id :any,
 }
-export const Card = ({ biano, area, bed, image, price, onpressed, style }: CardType) => {
+export const AnimatedCard = ({ biano, area, bed, image, price, onpressed, style }: CardType) => {
   let [isFavorite, setFavorite] = useState(false);
 
   return (

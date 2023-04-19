@@ -1,17 +1,34 @@
 import {StackNavigationProp} from '@react-navigation/stack';
-import {Animated, FlatList, View} from 'react-native';
-import {Card} from '../../components/atoms';
+import {Animated, FlatList, View,Text} from 'react-native';
+import {AnimatedCard, Card} from '../../components/atoms';
 import {ComplexHeader} from '../../components/organisms/Header/Header';
 import {getHeight, getWidth} from '../../config/dimensions';
 import {StackNavigatorParamList} from '../../navigations/types';
 import {DATA} from '../../redux/Api/GetData';
 import {Colors} from '../../styles';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBuildingsData } from '../../redux/reducers/dataslice';
 
 type ScreenNavigationProp = StackNavigationProp<StackNavigatorParamList>;
 type NavigationProps = {navigation: ScreenNavigationProp};
 
 export const HomeScreenView = ({navigation}: NavigationProps) => {
+  // const dispatch = useDispatch<any>();
+  // const users = useSelector((state:any) => state.users.users);
+  // const status = useSelector((state:any) => state.users.status);
+  // const error = useSelector((state:any) => state.users.error);
+  // useEffect(() => {
+  //   dispatch(fetchBuildingsData());
+  // }, [dispatch]);
+
+  // if (status === 'loading') {
+  //   return <Text>Loading...</Text>;
+  // }
+
+  // if (status === 'failed') {
+  //   return <Text>{error}</Text>;
+  // }
   const scrollY = useRef(new Animated.Value(0)).current;
   return (
     <View>
@@ -51,18 +68,21 @@ export const HomeScreenView = ({navigation}: NavigationProps) => {
                   outputRange: [1, 1, 1, 0]
               })
                 
-                return<Card
+                return<AnimatedCard
+                
                 style={{transform:[{scale}],
                 opacity:opacity}}
                   onpressed={() => {
                     navigation.navigate('SpecificationsView');
                   }}
+                  
                   biano={item.banio}
                   area={item.area}
                   bed={item.bed}
                   image={item.image}
                   price={item.price}
-                  id={item.id}></Card>
+                  id={item.id}
+                  ></AnimatedCard>
 }}></Animated.FlatList>
           </View>
         </View>
