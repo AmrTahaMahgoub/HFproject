@@ -1,32 +1,42 @@
-import React, {useState} from 'react';
-import {View, Text, Pressable, TextInput, ImageBackground} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Pressable, TextInput, ImageBackground, StyleProp, TextStyle } from 'react-native';
 import styles from './styles';
-import {ViewRow} from '../../atoms/ViewRow';
-import {SvgIcon} from '../../../assets/svgs';
-import {CustomText16} from '../../atoms/Text/text';
-import {DefaultButton, TouchableTextSvg, SortedFilter} from '../../atoms';
-import {ModalSheet} from '../../atoms/Modal/ModalSheet';
-import {getHeight, getWidth, RFValue} from '../../../config/dimensions';
-import {Colors} from '../../../styles';
+import { ViewRow } from '../../atoms/ViewRow';
+import { SvgIcon } from '../../../assets/svgs';
+import { CustomText16 } from '../../atoms/Text/text';
+import { DefaultButton, TouchableTextSvg, SortedFilter } from '../../atoms';
+import { ModalSheet } from '../../atoms/Modal/ModalSheet';
+import { getHeight, getWidth, RFValue } from '../../../config/dimensions';
+import { Colors, Typography } from '../../../styles';
+import Animated from 'react-native-reanimated';
 
 type SimpleHeaderProps = {
+  animatedStyle?: any
+  style?: any;
   title?: string;
   onPress?: () => void;
 };
 
 export const SimpleHeader = (props: SimpleHeaderProps) => {
   return (
-    <>
+    <View style={props.style}>
       <ViewRow style={styles.simpleHeaderSearchbar}>
         <Pressable onPress={props.onPress}>
           <SvgIcon name={'ArrowBack'}></SvgIcon>
         </Pressable>
-        <CustomText16 style={styles.headertitle}>
-          <Text>{props.title}</Text>
-        </CustomText16>
-      </ViewRow>
-      <View style={styles.blankcontainer}></View>
-    </>
+
+        <Animated.Text style={[{
+          fontFamily: Typography.SEMIBOLD_NUNITO,
+          fontSize: Typography.FONT_SIZE_16,
+          color: Colors.WHITE,
+          textAlign: 'center',
+          flex: 1,
+          flexWrap: 'wrap',
+        }, props.animatedStyle]}>{props.title}</Animated.Text>
+
+      </ViewRow >
+      {/* <View style={styles.blankcontainer}></View> */}
+    </View>
   );
 };
 
@@ -122,12 +132,12 @@ export const MainHeader = (props: MainHeaderProps) => {
     </ViewRow>
   );
 };
-export const ImageHeader = ({image, onPress}: any) => {
+export const ImageHeader = ({ image, onPress }: any) => {
   return (
     <View>
       <ImageBackground
         source={image}
-        style={{height: getHeight(276), width: '100%'}}>
+        style={{ height: getHeight(276), width: '100%' }}>
         <ViewRow
           style={{
             justifyContent: 'space-between',

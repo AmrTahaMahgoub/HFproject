@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {getHeight, getWidth} from '../../config/dimensions';
+import {RFValue, getHeight, getWidth} from '../../config/dimensions';
 import {Colors} from '../../styles';
 
 const styles = StyleSheet.create({
@@ -24,7 +24,9 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
   imagecontainer: {
-    height: getHeight(668),
+    borderTopRightRadius:RFValue(30),
+    borderTopLeftRadius:RFValue(30),
+    height: getHeight(800),
     paddingHorizontal: getWidth(16),
     backgroundColor: Colors.WHITE,
     paddingTop: getHeight(30),

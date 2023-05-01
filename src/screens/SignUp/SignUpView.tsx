@@ -15,7 +15,7 @@ type NavigationProps = {navigation: ScreenNavigationProp};
 
 export const SignUpView = ({navigation}: NavigationProps) => {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    
       <View style={styles.maincontainer}>
         <SimpleHeader
           title={'Register new account'}
@@ -24,6 +24,7 @@ export const SignUpView = ({navigation}: NavigationProps) => {
           }}></SimpleHeader>
 
         <View style={styles.imagecontainer}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <Image style={styles.imagestyle} source={images.logo} />
 
           <CustomTextRgular14>{Strings.NAME}</CustomTextRgular14>
@@ -93,8 +94,10 @@ export const SignUpView = ({navigation}: NavigationProps) => {
                 navigation.navigate('SignInView');
               }}></TouchButton>
           </ViewRow>
+          </ScrollView>
         </View>
+        
       </View>
-    </ScrollView>
+
   );
 };

@@ -18,3 +18,4 @@ export {DataSpecificationContainer} from "./DataSpecificationContainer/DataSpeci
 export {IconText} from "./IconText/IconText"
 export {Card} from "./Card/Container";
 export {AnimatedCard } from "./AnimatedCard/AnimatedCard";
+export {Loader} from "./Loader/Loader";

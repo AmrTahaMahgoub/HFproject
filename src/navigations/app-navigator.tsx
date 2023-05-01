@@ -18,8 +18,8 @@ export function AppStackNavigator() {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       {/* <Stack.Screen name="Test" component={Test} /> */}
-      <Stack.Screen name="Splash" component={Splash} />
-      <Stack.Screen name="SignUpView" component={SignUpView} />
+      {/* <Stack.Screen name="Splash" component={Splash} /> */}
+      {/* <Stack.Screen name="SignUpView" component={SignUpView} /> */}
       <Stack.Screen name="SignInView" component={SignIView} />
       <Stack.Screen name="PasswardResretView" component={PasswardResretView} />
       <Stack.Screen name="SpecificationsView" component={SpecificationsView} />

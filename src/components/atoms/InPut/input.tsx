@@ -30,6 +30,8 @@ type InputProps = {
   editable?: boolean;
   name?: String;
   secureTextEntry?: boolean;
+  onFocus?:any
+  onBlur?:any
 };
 
 export const Input = (props: InputProps) => {
@@ -41,6 +43,8 @@ export const Input = (props: InputProps) => {
     <ViewRow style={[styles.container, props.textinputstyle]}>
       <SvgIcon name={props.icon} style={styles.lefticon}></SvgIcon>
       <TextInput
+      onBlur={props.onBlur}
+      onFocus={props.onFocus}
         editable={props.editable}
         maxLength={props.maxLength}
         keyboardType={props.keyboardType}

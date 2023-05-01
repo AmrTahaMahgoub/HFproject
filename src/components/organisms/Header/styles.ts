@@ -77,10 +77,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   blankcontainer: {
-    borderTopStartRadius: RFValue(32),
-    borderTopEndRadius: RFValue(32),
+    borderTopStartRadius: RFValue(70),
+    borderTopEndRadius: RFValue(70),
     backgroundColor: Colors.WHITE,
-    height: getHeight(39),
+    height: getHeight(25),
     width: '100%',
   },
   complexheader: {

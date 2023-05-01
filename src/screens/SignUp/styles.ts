@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {getWidth, getHeight} from '../../config/dimensions';
+import {getWidth, getHeight, RFValue} from '../../config/dimensions';
 import {Colors} from '../../styles';
 
 const styles = StyleSheet.create({
@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.PETROLUIM,
   },
   imagecontainer: {
+    flex:1,
+    borderTopRightRadius:RFValue(30),
+    borderTopLeftRadius:RFValue(30),
     paddingHorizontal: getWidth(16),
     backgroundColor: Colors.WHITE,
     paddingTop: getHeight(30),

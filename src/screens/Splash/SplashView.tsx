@@ -37,7 +37,7 @@ export const SplashView = () => {
     <View style={[styles.container]}>
       <Animated.Image
         resizeMode="contain"
-        style={[{width: getWidth(256), height: getHeight(256)},,reanimatedStyle]}
+        style={[{width: getWidth(256), height: getHeight(256)},reanimatedStyle]}
         source={images.logo}
       />
     </View>
